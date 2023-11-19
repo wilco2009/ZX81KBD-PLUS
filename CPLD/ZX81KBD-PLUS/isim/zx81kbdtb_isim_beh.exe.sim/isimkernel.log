@@ -1,0 +1,29 @@
+Command line:
+   zx81kbdtb_isim_beh.exe
+     -simmode  gui
+     -simrunnum  0
+     -socket  49479
+
+Thu Nov 09 20:47:56 2023
+
+
+ Elaboration Time: 0.234375 sec
+
+ Current Memory Usage: 653.021 Meg
+
+ Total Signals          : 23
+ Total Nets             : 37
+ Total Signal Drivers   : 18
+ Total Blocks           : 4
+ Total Primitive Blocks : 3
+ Total Processes        : 23
+ Total Traceable Variables  : 30
+ Total Scalar Nets and Variables : 247
+Total Line Count : 146
+
+ Total Simulation Time: 0.984375 sec
+
+ Current Memory Usage: 810.308 Meg
+
+Fri Nov 10 17:36:16 2023
+

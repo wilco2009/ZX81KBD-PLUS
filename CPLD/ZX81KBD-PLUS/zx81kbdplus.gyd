@@ -1,0 +1,54 @@
+Pin Freeze File:  version P.20131013
+
+9572XL44PC XC9572XL-10-PC44
+A0 S:PIN22
+A<10> S:PIN37
+A<11> S:PIN35
+A<12> S:PIN33
+A<13> S:PIN29
+A<14> S:PIN28
+A<15> S:PIN27
+A<8> S:PIN39
+A<9> S:PIN38
+CLK S:PIN2
+C<0> S:PIN1
+C<1> S:PIN44
+C<2> S:PIN43
+C<3> S:PIN42
+C<4> S:PIN40
+RST S:PIN3
+nIORQ S:PIN34
+nRD S:PIN36
+D<4> S:PIN26
+D<3> S:PIN25
+D<2> S:PIN19
+D<1> S:PIN18
+D<0> S:PIN14
+TEST1 S:PIN11
+TEST2 S:PIN12
+TEST3 S:PIN13
+
+
+;The remaining section of the .gyd file is for documentation purposes only.
+;It shows where your internal equations were placed in the last successful fit.
+
+PARTITION FB1_1 rows_7_3 rows_7_2 rows_6_3 rows_6_2
+		 rows_5_3 rows_5_2 rows_4_3 rows_4_2
+		 rows_3_3 rows_3_2 rows_2_3 rows_2_2
+		 rows_1_4 rows_1_3 rows_1_2 rows_0_4
+		 rows_0_3 rows_0_2
+PARTITION FB2_8 n<0> rows_7_4 rows_7_1 rows_6_4
+		 rows_6_1 rows_5_4 rows_4_4 rows_3_4
+		 rows_2_4 n<2> n<1>
+PARTITION FB3_2 TEST1_OBUF
+PARTITION FB3_4 EXP6_ data<0> EXP7_ EXP8_
+		 data<1> N0$BUF3
+PARTITION FB3_11 N0$BUF2
+PARTITION FB3_14 N0$BUF1
+PARTITION FB3_17 EXP9_ data<2>
+PARTITION FB4_1 data<3> N0$BUF0 rows_6_0 rows_5_1
+		 N0 rows_5_0 rows_4_1 rows_4_0
+		 rows_3_1 rows_3_0 rows_2_1 rows_2_0
+		 rows_1_1 rows_0_1 rows_0_0 data<4>
+		 rows_7_0 rows_1_0
+

@@ -1,0 +1,237 @@
+<html><head><link type='text/css' href='style.css' rel='stylesheet'></head><body class='pgBgnd'>
+<h3 align='center'>Equations</h3>
+<table width='90%' align='center' border='1' cellpadding='0' cellspacing='0'>
+<tr><td>
+</td></tr><tr><td>
+********** Mapped Logic **********
+</td></tr><tr><td>
+</td></tr><tr><td>
+D_I(0) <= '0';
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;D(0) <= D_I(0) when D_OE(0) = '1' else 'Z';
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;D_OE(0) <= (NOT nRD AND NOT nIORQ AND NOT A0 AND NOT TEST2);
+</td></tr><tr><td>
+</td></tr><tr><td>
+D_I(1) <= '0';
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;D(1) <= D_I(1) when D_OE(1) = '1' else 'Z';
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;D_OE(1) <= (NOT nRD AND NOT nIORQ AND NOT A0 AND NOT TEST3);
+</td></tr><tr><td>
+</td></tr><tr><td>
+D_I(2) <= '0';
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;D(2) <= D_I(2) when D_OE(2) = '1' else 'Z';
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;D_OE(2) <= (NOT nRD AND NOT nIORQ AND NOT A0 AND NOT data(2));
+</td></tr><tr><td>
+</td></tr><tr><td>
+D_I(3) <= '0';
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;D(3) <= D_I(3) when D_OE(3) = '1' else 'Z';
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;D_OE(3) <= (NOT nRD AND NOT nIORQ AND NOT A0 AND NOT data(3));
+</td></tr><tr><td>
+</td></tr><tr><td>
+D_I(4) <= '0';
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;D(4) <= D_I(4) when D_OE(4) = '1' else 'Z';
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;D_OE(4) <= (NOT nRD AND NOT nIORQ AND NOT A0 AND NOT data(4));
+</td></tr><tr><td>
+</td></tr><tr><td>
+</td></tr><tr><td>
+</td></tr><tr><td>
+</td></tr><tr><td>
+</td></tr><tr><td>
+</td></tr><tr><td>
+</td></tr><tr><td>
+</td></tr><tr><td>
+</td></tr><tr><td>
+TEST1 <= (NOT nRD AND NOT nIORQ AND NOT A0);
+</td></tr><tr><td>
+FDCPE_TEST2: FDCPE port map (TEST2,TEST2_D,TEST2_C,'0','0');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;TEST2_D <= ((NOT rows_1_0 AND NOT A(9))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT rows_3_0 AND NOT A(11))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT rows_0_0 AND NOT A(8))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT rows_2_0 AND NOT A(10))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT rows_4_0 AND NOT A(12))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT rows_5_0 AND NOT A(13))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT rows_6_0 AND NOT A(14))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT rows_7_0 AND NOT A(15)));
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;TEST2_C <= (NOT nRD AND NOT nIORQ AND NOT A0);
+</td></tr><tr><td>
+FDCPE_TEST3: FDCPE port map (TEST3,TEST3_D,TEST3_C,'0','0');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;TEST3_D <= ((NOT rows_1_1 AND NOT A(9))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT rows_3_1 AND NOT A(11))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT rows_0_1 AND NOT A(8))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT rows_2_1 AND NOT A(10))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT rows_4_1 AND NOT A(12))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT rows_5_1 AND NOT A(13))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT rows_6_1 AND NOT A(14))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT rows_7_1 AND NOT A(15)));
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;TEST3_C <= (NOT nRD AND NOT nIORQ AND NOT A0);
+</td></tr><tr><td>
+FDCPE_data2: FDCPE port map (data(2),data_D(2),data_C(2),'0','0');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;data_D(2) <= ((NOT rows_0_2 AND NOT A(8))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT rows_1_2 AND NOT A(9))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT rows_2_2 AND NOT A(10))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT rows_3_2 AND NOT A(11))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT rows_4_2 AND NOT A(12))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT rows_5_2 AND NOT A(13))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT rows_6_2 AND NOT A(14))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT rows_7_2 AND NOT A(15)));
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;data_C(2) <= (NOT nRD AND NOT nIORQ AND NOT A0);
+</td></tr><tr><td>
+FDCPE_data3: FDCPE port map (data(3),data_D(3),data_C(3),'0','0');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;data_D(3) <= ((NOT rows_0_3 AND NOT A(8))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT rows_1_3 AND NOT A(9))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT rows_2_3 AND NOT A(10))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT rows_3_3 AND NOT A(11))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT rows_4_3 AND NOT A(12))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT rows_5_3 AND NOT A(13))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT rows_6_3 AND NOT A(14))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT rows_7_3 AND NOT A(15)));
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;data_C(3) <= (NOT nRD AND NOT nIORQ AND NOT A0);
+</td></tr><tr><td>
+FDCPE_data4: FDCPE port map (data(4),data_D(4),data_C(4),'0','0');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;data_D(4) <= ((NOT rows_1_4 AND NOT A(9))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT rows_3_4 AND NOT A(11))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT rows_0_4 AND NOT A(8))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT rows_2_4 AND NOT A(10))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT rows_4_4 AND NOT A(12))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT rows_5_4 AND NOT A(13))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT rows_6_4 AND NOT A(14))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT rows_7_4 AND NOT A(15)));
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;data_C(4) <= (NOT nRD AND NOT nIORQ AND NOT A0);
+</td></tr><tr><td>
+FTCPE_n0: FTCPE port map (n(0),'1',CLK,NOT RST,'0');
+</td></tr><tr><td>
+FTCPE_n1: FTCPE port map (n(1),n(0),CLK,NOT RST,'0');
+</td></tr><tr><td>
+FTCPE_n2: FTCPE port map (n(2),n_T(2),CLK,NOT RST,'0');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;n_T(2) <= (n(0) AND n(1));
+</td></tr><tr><td>
+FDCPE_rows_0_0: FDCPE port map (rows_0_0,C(0),CLK,'0','0',rows_0_0_CE);
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;rows_0_0_CE <= (RST AND NOT n(0) AND NOT n(1) AND NOT n(2));
+</td></tr><tr><td>
+FDCPE_rows_0_1: FDCPE port map (rows_0_1,C(1),CLK,'0','0',rows_0_1_CE);
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;rows_0_1_CE <= (RST AND NOT n(0) AND NOT n(1) AND NOT n(2));
+</td></tr><tr><td>
+FDCPE_rows_0_2: FDCPE port map (rows_0_2,C(2),CLK,'0','0',rows_0_2_CE);
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;rows_0_2_CE <= (RST AND NOT n(0) AND NOT n(1) AND NOT n(2));
+</td></tr><tr><td>
+FDCPE_rows_0_3: FDCPE port map (rows_0_3,C(3),CLK,'0','0',rows_0_3_CE);
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;rows_0_3_CE <= (RST AND NOT n(0) AND NOT n(1) AND NOT n(2));
+</td></tr><tr><td>
+FDCPE_rows_0_4: FDCPE port map (rows_0_4,C(4),CLK,'0','0',rows_0_4_CE);
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;rows_0_4_CE <= (RST AND NOT n(0) AND NOT n(1) AND NOT n(2));
+</td></tr><tr><td>
+FDCPE_rows_1_0: FDCPE port map (rows_1_0,C(0),CLK,'0','0',rows_1_0_CE);
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;rows_1_0_CE <= (RST AND n(0) AND NOT n(1) AND NOT n(2));
+</td></tr><tr><td>
+FDCPE_rows_1_1: FDCPE port map (rows_1_1,C(1),CLK,'0','0',rows_1_1_CE);
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;rows_1_1_CE <= (RST AND n(0) AND NOT n(1) AND NOT n(2));
+</td></tr><tr><td>
+FDCPE_rows_1_2: FDCPE port map (rows_1_2,C(2),CLK,'0','0',rows_1_2_CE);
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;rows_1_2_CE <= (RST AND n(0) AND NOT n(1) AND NOT n(2));
+</td></tr><tr><td>
+FDCPE_rows_1_3: FDCPE port map (rows_1_3,C(3),CLK,'0','0',rows_1_3_CE);
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;rows_1_3_CE <= (RST AND n(0) AND NOT n(1) AND NOT n(2));
+</td></tr><tr><td>
+FDCPE_rows_1_4: FDCPE port map (rows_1_4,C(4),CLK,'0','0',rows_1_4_CE);
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;rows_1_4_CE <= (RST AND n(0) AND NOT n(1) AND NOT n(2));
+</td></tr><tr><td>
+FDCPE_rows_2_0: FDCPE port map (rows_2_0,C(0),CLK,'0','0',rows_2_0_CE);
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;rows_2_0_CE <= (RST AND NOT n(0) AND n(1) AND NOT n(2));
+</td></tr><tr><td>
+FDCPE_rows_2_1: FDCPE port map (rows_2_1,C(1),CLK,'0','0',rows_2_1_CE);
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;rows_2_1_CE <= (RST AND NOT n(0) AND n(1) AND NOT n(2));
+</td></tr><tr><td>
+FDCPE_rows_2_2: FDCPE port map (rows_2_2,C(2),CLK,'0','0',rows_2_2_CE);
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;rows_2_2_CE <= (RST AND NOT n(0) AND n(1) AND NOT n(2));
+</td></tr><tr><td>
+FDCPE_rows_2_3: FDCPE port map (rows_2_3,C(3),CLK,'0','0',rows_2_3_CE);
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;rows_2_3_CE <= (RST AND NOT n(0) AND n(1) AND NOT n(2));
+</td></tr><tr><td>
+FDCPE_rows_2_4: FDCPE port map (rows_2_4,C(4),CLK,'0','0',rows_2_4_CE);
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;rows_2_4_CE <= (RST AND NOT n(0) AND n(1) AND NOT n(2));
+</td></tr><tr><td>
+FDCPE_rows_3_0: FDCPE port map (rows_3_0,C(0),CLK,'0','0',rows_3_0_CE);
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;rows_3_0_CE <= (RST AND n(0) AND n(1) AND NOT n(2));
+</td></tr><tr><td>
+FDCPE_rows_3_1: FDCPE port map (rows_3_1,C(1),CLK,'0','0',rows_3_1_CE);
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;rows_3_1_CE <= (RST AND n(0) AND n(1) AND NOT n(2));
+</td></tr><tr><td>
+FDCPE_rows_3_2: FDCPE port map (rows_3_2,C(2),CLK,'0','0',rows_3_2_CE);
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;rows_3_2_CE <= (RST AND n(0) AND n(1) AND NOT n(2));
+</td></tr><tr><td>
+FDCPE_rows_3_3: FDCPE port map (rows_3_3,C(3),CLK,'0','0',rows_3_3_CE);
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;rows_3_3_CE <= (RST AND n(0) AND n(1) AND NOT n(2));
+</td></tr><tr><td>
+FDCPE_rows_3_4: FDCPE port map (rows_3_4,C(4),CLK,'0','0',rows_3_4_CE);
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;rows_3_4_CE <= (RST AND n(0) AND n(1) AND NOT n(2));
+</td></tr><tr><td>
+FDCPE_rows_4_0: FDCPE port map (rows_4_0,C(0),CLK,'0','0',rows_4_0_CE);
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;rows_4_0_CE <= (RST AND NOT n(0) AND NOT n(1) AND n(2));
+</td></tr><tr><td>
+FDCPE_rows_4_1: FDCPE port map (rows_4_1,C(1),CLK,'0','0',rows_4_1_CE);
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;rows_4_1_CE <= (RST AND NOT n(0) AND NOT n(1) AND n(2));
+</td></tr><tr><td>
+FDCPE_rows_4_2: FDCPE port map (rows_4_2,C(2),CLK,'0','0',rows_4_2_CE);
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;rows_4_2_CE <= (RST AND NOT n(0) AND NOT n(1) AND n(2));
+</td></tr><tr><td>
+FDCPE_rows_4_3: FDCPE port map (rows_4_3,C(3),CLK,'0','0',rows_4_3_CE);
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;rows_4_3_CE <= (RST AND NOT n(0) AND NOT n(1) AND n(2));
+</td></tr><tr><td>
+FDCPE_rows_4_4: FDCPE port map (rows_4_4,C(4),CLK,'0','0',rows_4_4_CE);
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;rows_4_4_CE <= (RST AND NOT n(0) AND NOT n(1) AND n(2));
+</td></tr><tr><td>
+FDCPE_rows_5_0: FDCPE port map (rows_5_0,C(0),CLK,'0','0',rows_5_0_CE);
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;rows_5_0_CE <= (RST AND n(0) AND NOT n(1) AND n(2));
+</td></tr><tr><td>
+FDCPE_rows_5_1: FDCPE port map (rows_5_1,C(1),CLK,'0','0',rows_5_1_CE);
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;rows_5_1_CE <= (RST AND n(0) AND NOT n(1) AND n(2));
+</td></tr><tr><td>
+FDCPE_rows_5_2: FDCPE port map (rows_5_2,C(2),CLK,'0','0',rows_5_2_CE);
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;rows_5_2_CE <= (RST AND n(0) AND NOT n(1) AND n(2));
+</td></tr><tr><td>
+FDCPE_rows_5_3: FDCPE port map (rows_5_3,C(3),CLK,'0','0',rows_5_3_CE);
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;rows_5_3_CE <= (RST AND n(0) AND NOT n(1) AND n(2));
+</td></tr><tr><td>
+FDCPE_rows_5_4: FDCPE port map (rows_5_4,C(4),CLK,'0','0',rows_5_4_CE);
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;rows_5_4_CE <= (RST AND n(0) AND NOT n(1) AND n(2));
+</td></tr><tr><td>
+FDCPE_rows_6_0: FDCPE port map (rows_6_0,C(0),CLK,'0','0',rows_6_0_CE);
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;rows_6_0_CE <= (RST AND NOT n(0) AND n(1) AND n(2));
+</td></tr><tr><td>
+FDCPE_rows_6_1: FDCPE port map (rows_6_1,C(1),CLK,'0','0',rows_6_1_CE);
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;rows_6_1_CE <= (RST AND NOT n(0) AND n(1) AND n(2));
+</td></tr><tr><td>
+FDCPE_rows_6_2: FDCPE port map (rows_6_2,C(2),CLK,'0','0',rows_6_2_CE);
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;rows_6_2_CE <= (RST AND NOT n(0) AND n(1) AND n(2));
+</td></tr><tr><td>
+FDCPE_rows_6_3: FDCPE port map (rows_6_3,C(3),CLK,'0','0',rows_6_3_CE);
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;rows_6_3_CE <= (RST AND NOT n(0) AND n(1) AND n(2));
+</td></tr><tr><td>
+FDCPE_rows_6_4: FDCPE port map (rows_6_4,C(4),CLK,'0','0',rows_6_4_CE);
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;rows_6_4_CE <= (RST AND NOT n(0) AND n(1) AND n(2));
+</td></tr><tr><td>
+FDCPE_rows_7_0: FDCPE port map (rows_7_0,C(0),CLK,'0','0',rows_7_0_CE);
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;rows_7_0_CE <= (RST AND n(0) AND n(1) AND n(2));
+</td></tr><tr><td>
+FDCPE_rows_7_1: FDCPE port map (rows_7_1,C(1),CLK,'0','0',rows_7_1_CE);
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;rows_7_1_CE <= (RST AND n(0) AND n(1) AND n(2));
+</td></tr><tr><td>
+FDCPE_rows_7_2: FDCPE port map (rows_7_2,C(2),CLK,'0','0',rows_7_2_CE);
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;rows_7_2_CE <= (RST AND n(0) AND n(1) AND n(2));
+</td></tr><tr><td>
+FDCPE_rows_7_3: FDCPE port map (rows_7_3,C(3),CLK,'0','0',rows_7_3_CE);
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;rows_7_3_CE <= (RST AND n(0) AND n(1) AND n(2));
+</td></tr><tr><td>
+FDCPE_rows_7_4: FDCPE port map (rows_7_4,C(4),CLK,'0','0',rows_7_4_CE);
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;rows_7_4_CE <= (RST AND n(0) AND n(1) AND n(2));
+</td></tr><tr><td>
+Register Legend:
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; FDCPE (Q,D,C,CLR,PRE,CE); 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; FTCPE (Q,D,C,CLR,PRE,CE); 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; LDCP  (Q,D,G,CLR,PRE); 
+</td></tr><tr><td>
+</td></tr>
+</table>
+<form><span class="pgRef"><table width="90%" align="center"><tr>
+<td align="left"><input type="button" onclick="javascript:parent.leftnav.showTop()" onmouseover="window.status='goto top of page'; return true;" onmouseout="window.status=''" value="back to top"></td>
+<td align="right"><input type="button" onclick="window.print()" onmouseover="window.status='print page'; return true;" onmouseout="window.status=''" value="print page"></td>
+</tr></table></span></form>
+</body></html>

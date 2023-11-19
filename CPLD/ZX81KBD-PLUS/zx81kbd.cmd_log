@@ -1,0 +1,1 @@
+xst -intstyle ise -ifn "Z:/OneDrive/Documentos/GitHub/ZX81KBD-PLUS/ZX81KBD-PLUS/zx81kbd.xst" -ofn "Z:/OneDrive/Documentos/GitHub/ZX81KBD-PLUS/ZX81KBD-PLUS/zx81kbd.syr" 

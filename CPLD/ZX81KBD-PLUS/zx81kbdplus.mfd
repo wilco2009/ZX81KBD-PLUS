@@ -1,0 +1,712 @@
+MDF Database:  version 1.0
+MDF_INFO | zx81kbdplus | XC9572XL-10-PC44
+MACROCELL | 2 | 1 | TEST1_OBUF
+ATTRIBUTES | 264962 | 0
+INPUTS | 3 | nRD  | nIORQ  | A0
+INPUTP | 3 | 88 | 83 | 52
+EQ | 1 | 
+   TEST1 = !nRD & !nIORQ & !A0;
+
+MACROCELL | 1 | 7 | n<0>
+ATTRIBUTES | 4326192 | 0
+OUTPUTMC | 42 | 1 | 17 | 1 | 16 | 3 | 14 | 3 | 13 | 0 | 17 | 0 | 16 | 0 | 15 | 3 | 17 | 3 | 12 | 0 | 14 | 0 | 13 | 0 | 12 | 3 | 11 | 3 | 10 | 0 | 11 | 0 | 10 | 1 | 15 | 3 | 9 | 3 | 8 | 0 | 9 | 0 | 8 | 1 | 14 | 3 | 7 | 3 | 6 | 0 | 7 | 0 | 6 | 1 | 13 | 3 | 5 | 3 | 3 | 0 | 5 | 0 | 4 | 1 | 12 | 3 | 2 | 1 | 11 | 0 | 3 | 0 | 2 | 1 | 10 | 3 | 16 | 1 | 9 | 0 | 1 | 0 | 0 | 1 | 8
+INPUTS | 2 | CLK  | RST
+INPUTP | 2 | 12 | 13
+EQ | 3 | 
+   n<0>.T = Vcc;
+   n<0>.CLK = CLK;
+   n<0>.AR = !RST;
+
+MACROCELL | 1 | 17 | n<1>
+ATTRIBUTES | 4326192 | 0
+OUTPUTMC | 41 | 1 | 16 | 3 | 14 | 3 | 13 | 0 | 17 | 0 | 16 | 0 | 15 | 3 | 17 | 3 | 12 | 0 | 14 | 0 | 13 | 0 | 12 | 3 | 11 | 3 | 10 | 0 | 11 | 0 | 10 | 1 | 15 | 3 | 9 | 3 | 8 | 0 | 9 | 0 | 8 | 1 | 14 | 3 | 7 | 3 | 6 | 0 | 7 | 0 | 6 | 1 | 13 | 3 | 5 | 3 | 3 | 0 | 5 | 0 | 4 | 1 | 12 | 3 | 2 | 1 | 11 | 0 | 3 | 0 | 2 | 1 | 10 | 3 | 16 | 1 | 9 | 0 | 1 | 0 | 0 | 1 | 8
+INPUTS | 3 | n<0>  | CLK  | RST
+INPUTMC | 1 | 1 | 7
+INPUTP | 2 | 12 | 13
+EQ | 3 | 
+   n<1>.T = n<0>;
+   n<1>.CLK = CLK;
+   n<1>.AR = !RST;
+
+MACROCELL | 1 | 16 | n<2>
+ATTRIBUTES | 4326192 | 0
+OUTPUTMC | 40 | 3 | 14 | 3 | 13 | 0 | 17 | 0 | 16 | 0 | 15 | 3 | 17 | 3 | 12 | 0 | 14 | 0 | 13 | 0 | 12 | 3 | 11 | 3 | 10 | 0 | 11 | 0 | 10 | 1 | 15 | 3 | 9 | 3 | 8 | 0 | 9 | 0 | 8 | 1 | 14 | 3 | 7 | 3 | 6 | 0 | 7 | 0 | 6 | 1 | 13 | 3 | 5 | 3 | 3 | 0 | 5 | 0 | 4 | 1 | 12 | 3 | 2 | 1 | 11 | 0 | 3 | 0 | 2 | 1 | 10 | 3 | 16 | 1 | 9 | 0 | 1 | 0 | 0 | 1 | 8
+INPUTS | 4 | n<0>  | n<1>  | CLK  | RST
+INPUTMC | 2 | 1 | 7 | 1 | 17
+INPUTP | 2 | 12 | 13
+EQ | 3 | 
+   n<2>.T = n<0> & n<1>;
+   n<2>.CLK = CLK;
+   n<2>.AR = !RST;
+
+MACROCELL | 3 | 14 | rows_0_0
+ATTRIBUTES | 8520544 | 0
+OUTPUTMC | 2 | 2 | 5 | 3 | 15
+INPUTS | 10 | C<0>  | CLK  | RST  | n<0>  | n<1>  | n<2>  | rows_1_4  | A<9>  | rows_3_4  | A<11>
+INPUTMC | 5 | 1 | 7 | 1 | 17 | 1 | 16 | 0 | 12 | 1 | 14
+INPUTP | 5 | 11 | 12 | 13 | 90 | 87
+EXPORTS | 1 | 3 | 15
+EQ | 5 | 
+   rows_0_0.D = C<0>;
+   rows_0_0.CLK = CLK;
+   rows_0_0.CE = RST & !n<0> & !n<1> & !n<2>;
+    rows_0_0.EXP  =  !rows_1_4 & !A<9>
+	# !rows_3_4 & !A<11>
+
+MACROCELL | 3 | 13 | rows_0_1
+ATTRIBUTES | 8520544 | 0
+OUTPUTMC | 1 | 2 | 8
+INPUTS | 6 | C<1>  | CLK  | RST  | n<0>  | n<1>  | n<2>
+INPUTMC | 3 | 1 | 7 | 1 | 17 | 1 | 16
+INPUTP | 3 | 10 | 12 | 13
+EQ | 3 | 
+   rows_0_1.D = C<1>;
+   rows_0_1.CLK = CLK;
+   rows_0_1.CE = RST & !n<0> & !n<1> & !n<2>;
+
+MACROCELL | 0 | 17 | rows_0_2
+ATTRIBUTES | 8520544 | 0
+OUTPUTMC | 1 | 2 | 16
+INPUTS | 6 | C<2>  | CLK  | RST  | n<0>  | n<1>  | n<2>
+INPUTMC | 3 | 1 | 7 | 1 | 17 | 1 | 16
+INPUTP | 3 | 9 | 12 | 13
+EQ | 3 | 
+   rows_0_2.D = C<2>;
+   rows_0_2.CLK = CLK;
+   rows_0_2.CE = RST & !n<0> & !n<1> & !n<2>;
+
+MACROCELL | 0 | 16 | rows_0_3
+ATTRIBUTES | 8520544 | 0
+OUTPUTMC | 1 | 3 | 1
+INPUTS | 6 | C<3>  | CLK  | RST  | n<0>  | n<1>  | n<2>
+INPUTMC | 3 | 1 | 7 | 1 | 17 | 1 | 16
+INPUTP | 3 | 7 | 12 | 13
+EQ | 3 | 
+   rows_0_3.D = C<3>;
+   rows_0_3.CLK = CLK;
+   rows_0_3.CE = RST & !n<0> & !n<1> & !n<2>;
+
+MACROCELL | 0 | 15 | rows_0_4
+ATTRIBUTES | 8520544 | 0
+OUTPUTMC | 1 | 3 | 16
+INPUTS | 6 | C<4>  | CLK  | RST  | n<0>  | n<1>  | n<2>
+INPUTMC | 3 | 1 | 7 | 1 | 17 | 1 | 16
+INPUTP | 3 | 3 | 12 | 13
+EQ | 3 | 
+   rows_0_4.D = C<4>;
+   rows_0_4.CLK = CLK;
+   rows_0_4.CE = RST & !n<0> & !n<1> & !n<2>;
+
+MACROCELL | 3 | 17 | rows_1_0
+ATTRIBUTES | 8520544 | 0
+OUTPUTMC | 1 | 2 | 3
+INPUTS | 6 | C<0>  | CLK  | RST  | n<0>  | n<1>  | n<2>
+INPUTMC | 3 | 1 | 7 | 1 | 17 | 1 | 16
+INPUTP | 3 | 11 | 12 | 13
+EQ | 3 | 
+   rows_1_0.D = C<0>;
+   rows_1_0.CLK = CLK;
+   rows_1_0.CE = RST & n<0> & !n<1> & !n<2>;
+
+MACROCELL | 3 | 12 | rows_1_1
+ATTRIBUTES | 8520544 | 0
+OUTPUTMC | 1 | 2 | 6
+INPUTS | 6 | C<1>  | CLK  | RST  | n<0>  | n<1>  | n<2>
+INPUTMC | 3 | 1 | 7 | 1 | 17 | 1 | 16
+INPUTP | 3 | 10 | 12 | 13
+EQ | 3 | 
+   rows_1_1.D = C<1>;
+   rows_1_1.CLK = CLK;
+   rows_1_1.CE = RST & n<0> & !n<1> & !n<2>;
+
+MACROCELL | 0 | 14 | rows_1_2
+ATTRIBUTES | 8520544 | 0
+OUTPUTMC | 1 | 2 | 16
+INPUTS | 6 | C<2>  | CLK  | RST  | n<0>  | n<1>  | n<2>
+INPUTMC | 3 | 1 | 7 | 1 | 17 | 1 | 16
+INPUTP | 3 | 9 | 12 | 13
+EQ | 3 | 
+   rows_1_2.D = C<2>;
+   rows_1_2.CLK = CLK;
+   rows_1_2.CE = RST & n<0> & !n<1> & !n<2>;
+
+MACROCELL | 0 | 13 | rows_1_3
+ATTRIBUTES | 8520544 | 0
+OUTPUTMC | 1 | 3 | 1
+INPUTS | 6 | C<3>  | CLK  | RST  | n<0>  | n<1>  | n<2>
+INPUTMC | 3 | 1 | 7 | 1 | 17 | 1 | 16
+INPUTP | 3 | 7 | 12 | 13
+EQ | 3 | 
+   rows_1_3.D = C<3>;
+   rows_1_3.CLK = CLK;
+   rows_1_3.CE = RST & n<0> & !n<1> & !n<2>;
+
+MACROCELL | 0 | 12 | rows_1_4
+ATTRIBUTES | 8520544 | 0
+OUTPUTMC | 1 | 3 | 14
+INPUTS | 6 | C<4>  | CLK  | RST  | n<0>  | n<1>  | n<2>
+INPUTMC | 3 | 1 | 7 | 1 | 17 | 1 | 16
+INPUTP | 3 | 3 | 12 | 13
+EQ | 3 | 
+   rows_1_4.D = C<4>;
+   rows_1_4.CLK = CLK;
+   rows_1_4.CE = RST & n<0> & !n<1> & !n<2>;
+
+MACROCELL | 3 | 11 | rows_2_0
+ATTRIBUTES | 8520544 | 0
+OUTPUTMC | 1 | 2 | 5
+INPUTS | 6 | C<0>  | CLK  | RST  | n<0>  | n<1>  | n<2>
+INPUTMC | 3 | 1 | 7 | 1 | 17 | 1 | 16
+INPUTP | 3 | 11 | 12 | 13
+EQ | 3 | 
+   rows_2_0.D = C<0>;
+   rows_2_0.CLK = CLK;
+   rows_2_0.CE = RST & !n<0> & n<1> & !n<2>;
+
+MACROCELL | 3 | 10 | rows_2_1
+ATTRIBUTES | 8520544 | 0
+OUTPUTMC | 1 | 2 | 8
+INPUTS | 6 | C<1>  | CLK  | RST  | n<0>  | n<1>  | n<2>
+INPUTMC | 3 | 1 | 7 | 1 | 17 | 1 | 16
+INPUTP | 3 | 10 | 12 | 13
+EQ | 3 | 
+   rows_2_1.D = C<1>;
+   rows_2_1.CLK = CLK;
+   rows_2_1.CE = RST & !n<0> & n<1> & !n<2>;
+
+MACROCELL | 0 | 11 | rows_2_2
+ATTRIBUTES | 8520544 | 0
+OUTPUTMC | 1 | 2 | 16
+INPUTS | 6 | C<2>  | CLK  | RST  | n<0>  | n<1>  | n<2>
+INPUTMC | 3 | 1 | 7 | 1 | 17 | 1 | 16
+INPUTP | 3 | 9 | 12 | 13
+EQ | 3 | 
+   rows_2_2.D = C<2>;
+   rows_2_2.CLK = CLK;
+   rows_2_2.CE = RST & !n<0> & n<1> & !n<2>;
+
+MACROCELL | 0 | 10 | rows_2_3
+ATTRIBUTES | 8520544 | 0
+OUTPUTMC | 1 | 3 | 1
+INPUTS | 6 | C<3>  | CLK  | RST  | n<0>  | n<1>  | n<2>
+INPUTMC | 3 | 1 | 7 | 1 | 17 | 1 | 16
+INPUTP | 3 | 7 | 12 | 13
+EQ | 3 | 
+   rows_2_3.D = C<3>;
+   rows_2_3.CLK = CLK;
+   rows_2_3.CE = RST & !n<0> & n<1> & !n<2>;
+
+MACROCELL | 1 | 15 | rows_2_4
+ATTRIBUTES | 8520544 | 0
+OUTPUTMC | 1 | 3 | 16
+INPUTS | 6 | C<4>  | CLK  | RST  | n<0>  | n<1>  | n<2>
+INPUTMC | 3 | 1 | 7 | 1 | 17 | 1 | 16
+INPUTP | 3 | 3 | 12 | 13
+EQ | 3 | 
+   rows_2_4.D = C<4>;
+   rows_2_4.CLK = CLK;
+   rows_2_4.CE = RST & !n<0> & n<1> & !n<2>;
+
+MACROCELL | 3 | 9 | rows_3_0
+ATTRIBUTES | 8520544 | 0
+OUTPUTMC | 1 | 2 | 3
+INPUTS | 6 | C<0>  | CLK  | RST  | n<0>  | n<1>  | n<2>
+INPUTMC | 3 | 1 | 7 | 1 | 17 | 1 | 16
+INPUTP | 3 | 11 | 12 | 13
+EQ | 3 | 
+   rows_3_0.D = C<0>;
+   rows_3_0.CLK = CLK;
+   rows_3_0.CE = RST & n<0> & n<1> & !n<2>;
+
+MACROCELL | 3 | 8 | rows_3_1
+ATTRIBUTES | 8520544 | 0
+OUTPUTMC | 1 | 2 | 6
+INPUTS | 6 | C<1>  | CLK  | RST  | n<0>  | n<1>  | n<2>
+INPUTMC | 3 | 1 | 7 | 1 | 17 | 1 | 16
+INPUTP | 3 | 10 | 12 | 13
+EQ | 3 | 
+   rows_3_1.D = C<1>;
+   rows_3_1.CLK = CLK;
+   rows_3_1.CE = RST & n<0> & n<1> & !n<2>;
+
+MACROCELL | 0 | 9 | rows_3_2
+ATTRIBUTES | 8520544 | 0
+OUTPUTMC | 1 | 2 | 16
+INPUTS | 6 | C<2>  | CLK  | RST  | n<0>  | n<1>  | n<2>
+INPUTMC | 3 | 1 | 7 | 1 | 17 | 1 | 16
+INPUTP | 3 | 9 | 12 | 13
+EQ | 3 | 
+   rows_3_2.D = C<2>;
+   rows_3_2.CLK = CLK;
+   rows_3_2.CE = RST & n<0> & n<1> & !n<2>;
+
+MACROCELL | 0 | 8 | rows_3_3
+ATTRIBUTES | 8520544 | 0
+OUTPUTMC | 1 | 3 | 1
+INPUTS | 6 | C<3>  | CLK  | RST  | n<0>  | n<1>  | n<2>
+INPUTMC | 3 | 1 | 7 | 1 | 17 | 1 | 16
+INPUTP | 3 | 7 | 12 | 13
+EQ | 3 | 
+   rows_3_3.D = C<3>;
+   rows_3_3.CLK = CLK;
+   rows_3_3.CE = RST & n<0> & n<1> & !n<2>;
+
+MACROCELL | 1 | 14 | rows_3_4
+ATTRIBUTES | 8520544 | 0
+OUTPUTMC | 1 | 3 | 14
+INPUTS | 6 | C<4>  | CLK  | RST  | n<0>  | n<1>  | n<2>
+INPUTMC | 3 | 1 | 7 | 1 | 17 | 1 | 16
+INPUTP | 3 | 3 | 12 | 13
+EQ | 3 | 
+   rows_3_4.D = C<4>;
+   rows_3_4.CLK = CLK;
+   rows_3_4.CE = RST & n<0> & n<1> & !n<2>;
+
+MACROCELL | 3 | 7 | rows_4_0
+ATTRIBUTES | 8520544 | 0
+OUTPUTMC | 1 | 2 | 4
+INPUTS | 6 | C<0>  | CLK  | RST  | n<0>  | n<1>  | n<2>
+INPUTMC | 3 | 1 | 7 | 1 | 17 | 1 | 16
+INPUTP | 3 | 11 | 12 | 13
+EQ | 3 | 
+   rows_4_0.D = C<0>;
+   rows_4_0.CLK = CLK;
+   rows_4_0.CE = RST & !n<0> & !n<1> & n<2>;
+
+MACROCELL | 3 | 6 | rows_4_1
+ATTRIBUTES | 8520544 | 0
+OUTPUTMC | 1 | 2 | 7
+INPUTS | 6 | C<1>  | CLK  | RST  | n<0>  | n<1>  | n<2>
+INPUTMC | 3 | 1 | 7 | 1 | 17 | 1 | 16
+INPUTP | 3 | 10 | 12 | 13
+EQ | 3 | 
+   rows_4_1.D = C<1>;
+   rows_4_1.CLK = CLK;
+   rows_4_1.CE = RST & !n<0> & !n<1> & n<2>;
+
+MACROCELL | 0 | 7 | rows_4_2
+ATTRIBUTES | 8520544 | 0
+OUTPUTMC | 1 | 2 | 17
+INPUTS | 6 | C<2>  | CLK  | RST  | n<0>  | n<1>  | n<2>
+INPUTMC | 3 | 1 | 7 | 1 | 17 | 1 | 16
+INPUTP | 3 | 9 | 12 | 13
+EQ | 3 | 
+   rows_4_2.D = C<2>;
+   rows_4_2.CLK = CLK;
+   rows_4_2.CE = RST & !n<0> & !n<1> & n<2>;
+
+MACROCELL | 0 | 6 | rows_4_3
+ATTRIBUTES | 8520544 | 0
+OUTPUTMC | 1 | 3 | 0
+INPUTS | 6 | C<3>  | CLK  | RST  | n<0>  | n<1>  | n<2>
+INPUTMC | 3 | 1 | 7 | 1 | 17 | 1 | 16
+INPUTP | 3 | 7 | 12 | 13
+EQ | 3 | 
+   rows_4_3.D = C<3>;
+   rows_4_3.CLK = CLK;
+   rows_4_3.CE = RST & !n<0> & !n<1> & n<2>;
+
+MACROCELL | 1 | 13 | rows_4_4
+ATTRIBUTES | 8520544 | 0
+OUTPUTMC | 1 | 3 | 15
+INPUTS | 6 | C<4>  | CLK  | RST  | n<0>  | n<1>  | n<2>
+INPUTMC | 3 | 1 | 7 | 1 | 17 | 1 | 16
+INPUTP | 3 | 3 | 12 | 13
+EQ | 3 | 
+   rows_4_4.D = C<4>;
+   rows_4_4.CLK = CLK;
+   rows_4_4.CE = RST & !n<0> & !n<1> & n<2>;
+
+MACROCELL | 3 | 5 | rows_5_0
+ATTRIBUTES | 8520544 | 0
+OUTPUTMC | 1 | 2 | 4
+INPUTS | 6 | C<0>  | CLK  | RST  | n<0>  | n<1>  | n<2>
+INPUTMC | 3 | 1 | 7 | 1 | 17 | 1 | 16
+INPUTP | 3 | 11 | 12 | 13
+EQ | 3 | 
+   rows_5_0.D = C<0>;
+   rows_5_0.CLK = CLK;
+   rows_5_0.CE = RST & n<0> & !n<1> & n<2>;
+
+MACROCELL | 3 | 3 | rows_5_1
+ATTRIBUTES | 8520544 | 0
+OUTPUTMC | 1 | 2 | 7
+INPUTS | 6 | C<1>  | CLK  | RST  | n<0>  | n<1>  | n<2>
+INPUTMC | 3 | 1 | 7 | 1 | 17 | 1 | 16
+INPUTP | 3 | 10 | 12 | 13
+EQ | 3 | 
+   rows_5_1.D = C<1>;
+   rows_5_1.CLK = CLK;
+   rows_5_1.CE = RST & n<0> & !n<1> & n<2>;
+
+MACROCELL | 0 | 5 | rows_5_2
+ATTRIBUTES | 8520544 | 0
+OUTPUTMC | 1 | 2 | 17
+INPUTS | 6 | C<2>  | CLK  | RST  | n<0>  | n<1>  | n<2>
+INPUTMC | 3 | 1 | 7 | 1 | 17 | 1 | 16
+INPUTP | 3 | 9 | 12 | 13
+EQ | 3 | 
+   rows_5_2.D = C<2>;
+   rows_5_2.CLK = CLK;
+   rows_5_2.CE = RST & n<0> & !n<1> & n<2>;
+
+MACROCELL | 0 | 4 | rows_5_3
+ATTRIBUTES | 8520544 | 0
+OUTPUTMC | 1 | 3 | 0
+INPUTS | 6 | C<3>  | CLK  | RST  | n<0>  | n<1>  | n<2>
+INPUTMC | 3 | 1 | 7 | 1 | 17 | 1 | 16
+INPUTP | 3 | 7 | 12 | 13
+EQ | 3 | 
+   rows_5_3.D = C<3>;
+   rows_5_3.CLK = CLK;
+   rows_5_3.CE = RST & n<0> & !n<1> & n<2>;
+
+MACROCELL | 1 | 12 | rows_5_4
+ATTRIBUTES | 8520544 | 0
+OUTPUTMC | 1 | 3 | 15
+INPUTS | 6 | C<4>  | CLK  | RST  | n<0>  | n<1>  | n<2>
+INPUTMC | 3 | 1 | 7 | 1 | 17 | 1 | 16
+INPUTP | 3 | 3 | 12 | 13
+EQ | 3 | 
+   rows_5_4.D = C<4>;
+   rows_5_4.CLK = CLK;
+   rows_5_4.CE = RST & n<0> & !n<1> & n<2>;
+
+MACROCELL | 3 | 2 | rows_6_0
+ATTRIBUTES | 8520544 | 0
+OUTPUTMC | 1 | 2 | 4
+INPUTS | 6 | C<0>  | CLK  | RST  | n<0>  | n<1>  | n<2>
+INPUTMC | 3 | 1 | 7 | 1 | 17 | 1 | 16
+INPUTP | 3 | 11 | 12 | 13
+EQ | 3 | 
+   rows_6_0.D = C<0>;
+   rows_6_0.CLK = CLK;
+   rows_6_0.CE = RST & !n<0> & n<1> & n<2>;
+
+MACROCELL | 1 | 11 | rows_6_1
+ATTRIBUTES | 8520544 | 0
+OUTPUTMC | 1 | 2 | 7
+INPUTS | 6 | C<1>  | CLK  | RST  | n<0>  | n<1>  | n<2>
+INPUTMC | 3 | 1 | 7 | 1 | 17 | 1 | 16
+INPUTP | 3 | 10 | 12 | 13
+EQ | 3 | 
+   rows_6_1.D = C<1>;
+   rows_6_1.CLK = CLK;
+   rows_6_1.CE = RST & !n<0> & n<1> & n<2>;
+
+MACROCELL | 0 | 3 | rows_6_2
+ATTRIBUTES | 8520544 | 0
+OUTPUTMC | 1 | 2 | 17
+INPUTS | 6 | C<2>  | CLK  | RST  | n<0>  | n<1>  | n<2>
+INPUTMC | 3 | 1 | 7 | 1 | 17 | 1 | 16
+INPUTP | 3 | 9 | 12 | 13
+EQ | 3 | 
+   rows_6_2.D = C<2>;
+   rows_6_2.CLK = CLK;
+   rows_6_2.CE = RST & !n<0> & n<1> & n<2>;
+
+MACROCELL | 0 | 2 | rows_6_3
+ATTRIBUTES | 8520544 | 0
+OUTPUTMC | 1 | 3 | 0
+INPUTS | 6 | C<3>  | CLK  | RST  | n<0>  | n<1>  | n<2>
+INPUTMC | 3 | 1 | 7 | 1 | 17 | 1 | 16
+INPUTP | 3 | 7 | 12 | 13
+EQ | 3 | 
+   rows_6_3.D = C<3>;
+   rows_6_3.CLK = CLK;
+   rows_6_3.CE = RST & !n<0> & n<1> & n<2>;
+
+MACROCELL | 1 | 10 | rows_6_4
+ATTRIBUTES | 8520544 | 0
+OUTPUTMC | 1 | 3 | 15
+INPUTS | 6 | C<4>  | CLK  | RST  | n<0>  | n<1>  | n<2>
+INPUTMC | 3 | 1 | 7 | 1 | 17 | 1 | 16
+INPUTP | 3 | 3 | 12 | 13
+EQ | 3 | 
+   rows_6_4.D = C<4>;
+   rows_6_4.CLK = CLK;
+   rows_6_4.CE = RST & !n<0> & n<1> & n<2>;
+
+MACROCELL | 3 | 16 | rows_7_0
+ATTRIBUTES | 8520544 | 0
+OUTPUTMC | 2 | 2 | 4 | 3 | 15
+INPUTS | 10 | C<0>  | CLK  | RST  | n<0>  | n<1>  | n<2>  | rows_0_4  | A<8>  | rows_2_4  | A<10>
+INPUTMC | 5 | 1 | 7 | 1 | 17 | 1 | 16 | 0 | 15 | 1 | 15
+INPUTP | 5 | 11 | 12 | 13 | 92 | 89
+EXPORTS | 1 | 3 | 15
+EQ | 5 | 
+   rows_7_0.D = C<0>;
+   rows_7_0.CLK = CLK;
+   rows_7_0.CE = RST & n<0> & n<1> & n<2>;
+    rows_7_0.EXP  =  !rows_0_4 & !A<8>
+	# !rows_2_4 & !A<10>
+
+MACROCELL | 1 | 9 | rows_7_1
+ATTRIBUTES | 8520544 | 0
+OUTPUTMC | 1 | 2 | 7
+INPUTS | 6 | C<1>  | CLK  | RST  | n<0>  | n<1>  | n<2>
+INPUTMC | 3 | 1 | 7 | 1 | 17 | 1 | 16
+INPUTP | 3 | 10 | 12 | 13
+EQ | 3 | 
+   rows_7_1.D = C<1>;
+   rows_7_1.CLK = CLK;
+   rows_7_1.CE = RST & n<0> & n<1> & n<2>;
+
+MACROCELL | 0 | 1 | rows_7_2
+ATTRIBUTES | 8520544 | 0
+OUTPUTMC | 1 | 2 | 17
+INPUTS | 6 | C<2>  | CLK  | RST  | n<0>  | n<1>  | n<2>
+INPUTMC | 3 | 1 | 7 | 1 | 17 | 1 | 16
+INPUTP | 3 | 9 | 12 | 13
+EQ | 3 | 
+   rows_7_2.D = C<2>;
+   rows_7_2.CLK = CLK;
+   rows_7_2.CE = RST & n<0> & n<1> & n<2>;
+
+MACROCELL | 0 | 0 | rows_7_3
+ATTRIBUTES | 8520544 | 0
+OUTPUTMC | 1 | 3 | 0
+INPUTS | 6 | C<3>  | CLK  | RST  | n<0>  | n<1>  | n<2>
+INPUTMC | 3 | 1 | 7 | 1 | 17 | 1 | 16
+INPUTP | 3 | 7 | 12 | 13
+EQ | 3 | 
+   rows_7_3.D = C<3>;
+   rows_7_3.CLK = CLK;
+   rows_7_3.CE = RST & n<0> & n<1> & n<2>;
+
+MACROCELL | 1 | 8 | rows_7_4
+ATTRIBUTES | 8520544 | 0
+OUTPUTMC | 1 | 3 | 15
+INPUTS | 6 | C<4>  | CLK  | RST  | n<0>  | n<1>  | n<2>
+INPUTMC | 3 | 1 | 7 | 1 | 17 | 1 | 16
+INPUTP | 3 | 3 | 12 | 13
+EQ | 3 | 
+   rows_7_4.D = C<4>;
+   rows_7_4.CLK = CLK;
+   rows_7_4.CE = RST & n<0> & n<1> & n<2>;
+
+MACROCELL | 2 | 4 | data<0>
+ATTRIBUTES | 8782626 | 0
+OUTPUTMC | 1 | 2 | 8
+INPUTS | 13 | rows_7_0  | A<15>  | rows_6_0  | A<14>  | rows_5_0  | A<13>  | rows_4_0  | A<12>  | EXP6_.EXP  | EXP7_.EXP  | nRD  | nIORQ  | A0
+INPUTMC | 6 | 3 | 16 | 3 | 2 | 3 | 5 | 3 | 7 | 2 | 3 | 2 | 5
+INPUTP | 7 | 65 | 68 | 72 | 82 | 88 | 83 | 52
+IMPORTS | 2 | 2 | 3 | 2 | 5
+EQ | 11 | 
+   !TEST2.D = !rows_4_0 & !A<12>
+	# !rows_5_0 & !A<13>
+	# !rows_6_0 & !A<14>
+	# !rows_7_0 & !A<15>
+;Imported pterms FB3_4
+	# !rows_1_0 & !A<9>
+	# !rows_3_0 & !A<11>
+;Imported pterms FB3_6
+	# !rows_0_0 & !A<8>
+	# !rows_2_0 & !A<10>;
+   TEST2.CLK = !nRD & !nIORQ & !A0;
+
+MACROCELL | 2 | 7 | data<1>
+ATTRIBUTES | 8782626 | 0
+OUTPUTMC | 1 | 2 | 10
+INPUTS | 13 | rows_7_1  | A<15>  | rows_6_1  | A<14>  | rows_5_1  | A<13>  | rows_4_1  | A<12>  | EXP8_.EXP  | N0$BUF3.EXP  | nRD  | nIORQ  | A0
+INPUTMC | 6 | 1 | 9 | 1 | 11 | 3 | 3 | 3 | 6 | 2 | 6 | 2 | 8
+INPUTP | 7 | 65 | 68 | 72 | 82 | 88 | 83 | 52
+IMPORTS | 2 | 2 | 6 | 2 | 8
+EQ | 11 | 
+   !TEST3.D = !rows_4_1 & !A<12>
+	# !rows_5_1 & !A<13>
+	# !rows_6_1 & !A<14>
+	# !rows_7_1 & !A<15>
+;Imported pterms FB3_7
+	# !rows_1_1 & !A<9>
+	# !rows_3_1 & !A<11>
+;Imported pterms FB3_9
+	# !rows_0_1 & !A<8>
+	# !rows_2_1 & !A<10>;
+   TEST3.CLK = !nRD & !nIORQ & !A0;
+
+MACROCELL | 2 | 17 | data<2>
+ATTRIBUTES | 8520480 | 0
+OUTPUTMC | 1 | 2 | 13
+INPUTS | 12 | rows_7_2  | A<15>  | rows_6_2  | A<14>  | rows_5_2  | A<13>  | rows_4_2  | A<12>  | EXP9_.EXP  | nRD  | nIORQ  | A0
+INPUTMC | 5 | 0 | 1 | 0 | 3 | 0 | 5 | 0 | 7 | 2 | 16
+INPUTP | 7 | 65 | 68 | 72 | 82 | 88 | 83 | 52
+IMPORTS | 1 | 2 | 16
+EQ | 10 | 
+   !data<2>.D = !rows_4_2 & !A<12>
+	# !rows_5_2 & !A<13>
+	# !rows_6_2 & !A<14>
+	# !rows_7_2 & !A<15>
+;Imported pterms FB3_17
+	# !rows_0_2 & !A<8>
+	# !rows_1_2 & !A<9>
+	# !rows_2_2 & !A<10>
+	# !rows_3_2 & !A<11>;
+   data<2>.CLK = !nRD & !nIORQ & !A0;
+
+MACROCELL | 3 | 0 | data<3>
+ATTRIBUTES | 8520480 | 0
+OUTPUTMC | 1 | 3 | 1
+INPUTS | 12 | rows_7_3  | A<15>  | rows_6_3  | A<14>  | rows_5_3  | A<13>  | rows_4_3  | A<12>  | N0$BUF0.EXP  | nRD  | nIORQ  | A0
+INPUTMC | 5 | 0 | 0 | 0 | 2 | 0 | 4 | 0 | 6 | 3 | 1
+INPUTP | 7 | 65 | 68 | 72 | 82 | 88 | 83 | 52
+IMPORTS | 1 | 3 | 1
+EQ | 10 | 
+   !data<3>.D = !rows_4_3 & !A<12>
+	# !rows_5_3 & !A<13>
+	# !rows_6_3 & !A<14>
+	# !rows_7_3 & !A<15>
+;Imported pterms FB4_2
+	# !rows_0_3 & !A<8>
+	# !rows_1_3 & !A<9>
+	# !rows_2_3 & !A<10>
+	# !rows_3_3 & !A<11>;
+   data<3>.CLK = !nRD & !nIORQ & !A0;
+
+MACROCELL | 3 | 15 | data<4>
+ATTRIBUTES | 8520480 | 0
+OUTPUTMC | 1 | 3 | 4
+INPUTS | 13 | rows_7_4  | A<15>  | rows_6_4  | A<14>  | rows_5_4  | A<13>  | rows_4_4  | A<12>  | rows_0_0.EXP  | rows_7_0.EXP  | nRD  | nIORQ  | A0
+INPUTMC | 6 | 1 | 8 | 1 | 10 | 1 | 12 | 1 | 13 | 3 | 14 | 3 | 16
+INPUTP | 7 | 65 | 68 | 72 | 82 | 88 | 83 | 52
+IMPORTS | 2 | 3 | 14 | 3 | 16
+EQ | 11 | 
+   !data<4>.D = !rows_4_4 & !A<12>
+	# !rows_5_4 & !A<13>
+	# !rows_6_4 & !A<14>
+	# !rows_7_4 & !A<15>
+;Imported pterms FB4_15
+	# !rows_1_4 & !A<9>
+	# !rows_3_4 & !A<11>
+;Imported pterms FB4_17
+	# !rows_0_4 & !A<8>
+	# !rows_2_4 & !A<10>;
+   data<4>.CLK = !nRD & !nIORQ & !A0;
+
+MACROCELL | 3 | 4 | N0
+ATTRIBUTES | 265986 | 0
+INPUTS | 4 | nRD  | nIORQ  | A0  | data<4>
+INPUTMC | 1 | 3 | 15
+INPUTP | 3 | 88 | 83 | 52
+EQ | 2 | 
+   D<4> = Gnd;
+   D<4>.OE = !nRD & !nIORQ & !A0 & !data<4>;
+
+MACROCELL | 3 | 1 | N0$BUF0
+ATTRIBUTES | 265986 | 0
+OUTPUTMC | 1 | 3 | 0
+INPUTS | 12 | nRD  | nIORQ  | A0  | data<3>  | rows_0_3  | A<8>  | rows_1_3  | A<9>  | rows_2_3  | A<10>  | rows_3_3  | A<11>
+INPUTMC | 5 | 3 | 0 | 0 | 16 | 0 | 13 | 0 | 10 | 0 | 8
+INPUTP | 7 | 88 | 83 | 52 | 92 | 90 | 89 | 87
+EXPORTS | 1 | 3 | 0
+EQ | 6 | 
+   D<3> = Gnd;
+   D<3>.OE = !nRD & !nIORQ & !A0 & !data<3>;
+    N0$BUF0.EXP  =  !rows_0_3 & !A<8>
+	# !rows_1_3 & !A<9>
+	# !rows_2_3 & !A<10>
+	# !rows_3_3 & !A<11>
+
+MACROCELL | 2 | 13 | N0$BUF1
+ATTRIBUTES | 265986 | 0
+INPUTS | 4 | nRD  | nIORQ  | A0  | data<2>
+INPUTMC | 1 | 2 | 17
+INPUTP | 3 | 88 | 83 | 52
+EQ | 2 | 
+   D<2> = Gnd;
+   D<2>.OE = !nRD & !nIORQ & !A0 & !data<2>;
+
+MACROCELL | 2 | 10 | N0$BUF2
+ATTRIBUTES | 265986 | 0
+INPUTS | 4 | nRD  | nIORQ  | A0  | TEST3
+INPUTMC | 1 | 2 | 7
+INPUTP | 3 | 88 | 83 | 52
+EQ | 2 | 
+   D<1> = Gnd;
+   D<1>.OE = !nRD & !nIORQ & !A0 & !TEST3;
+
+MACROCELL | 2 | 8 | N0$BUF3
+ATTRIBUTES | 265986 | 0
+OUTPUTMC | 1 | 2 | 7
+INPUTS | 8 | nRD  | nIORQ  | A0  | TEST2  | rows_0_1  | A<8>  | rows_2_1  | A<10>
+INPUTMC | 3 | 2 | 4 | 3 | 13 | 3 | 10
+INPUTP | 5 | 88 | 83 | 52 | 92 | 89
+EXPORTS | 1 | 2 | 7
+EQ | 4 | 
+   D<0> = Gnd;
+   D<0>.OE = !nRD & !nIORQ & !A0 & !TEST2;
+    N0$BUF3.EXP  =  !rows_0_1 & !A<8>
+	# !rows_2_1 & !A<10>
+
+MACROCELL | 2 | 3 | EXP6_
+ATTRIBUTES | 2048 | 0
+OUTPUTMC | 1 | 2 | 4
+INPUTS | 4 | rows_1_0  | A<9>  | rows_3_0  | A<11>
+INPUTMC | 2 | 3 | 17 | 3 | 9
+INPUTP | 2 | 90 | 87
+EXPORTS | 1 | 2 | 4
+EQ | 2 | 
+       EXP6_.EXP  =  !rows_1_0 & !A<9>
+	# !rows_3_0 & !A<11>
+
+MACROCELL | 2 | 5 | EXP7_
+ATTRIBUTES | 2048 | 0
+OUTPUTMC | 1 | 2 | 4
+INPUTS | 4 | rows_0_0  | A<8>  | rows_2_0  | A<10>
+INPUTMC | 2 | 3 | 14 | 3 | 11
+INPUTP | 2 | 92 | 89
+EXPORTS | 1 | 2 | 4
+EQ | 2 | 
+       EXP7_.EXP  =  !rows_0_0 & !A<8>
+	# !rows_2_0 & !A<10>
+
+MACROCELL | 2 | 6 | EXP8_
+ATTRIBUTES | 2048 | 0
+OUTPUTMC | 1 | 2 | 7
+INPUTS | 4 | rows_1_1  | A<9>  | rows_3_1  | A<11>
+INPUTMC | 2 | 3 | 12 | 3 | 8
+INPUTP | 2 | 90 | 87
+EXPORTS | 1 | 2 | 7
+EQ | 2 | 
+       EXP8_.EXP  =  !rows_1_1 & !A<9>
+	# !rows_3_1 & !A<11>
+
+MACROCELL | 2 | 16 | EXP9_
+ATTRIBUTES | 2048 | 0
+OUTPUTMC | 1 | 2 | 17
+INPUTS | 8 | rows_0_2  | A<8>  | rows_1_2  | A<9>  | rows_2_2  | A<10>  | rows_3_2  | A<11>
+INPUTMC | 4 | 0 | 17 | 0 | 14 | 0 | 11 | 0 | 9
+INPUTP | 4 | 92 | 90 | 89 | 87
+EXPORTS | 1 | 2 | 17
+EQ | 4 | 
+       EXP9_.EXP  =  !rows_0_2 & !A<8>
+	# !rows_1_2 & !A<9>
+	# !rows_2_2 & !A<10>
+	# !rows_3_2 & !A<11>
+
+PIN | RST | 64 | 0 | N/A | 13 | 43 | 1 | 7 | 1 | 17 | 1 | 16 | 3 | 14 | 3 | 13 | 0 | 17 | 0 | 16 | 0 | 15 | 3 | 17 | 3 | 12 | 0 | 14 | 0 | 13 | 0 | 12 | 3 | 11 | 3 | 10 | 0 | 11 | 0 | 10 | 1 | 15 | 3 | 9 | 3 | 8 | 0 | 9 | 0 | 8 | 1 | 14 | 3 | 7 | 3 | 6 | 0 | 7 | 0 | 6 | 1 | 13 | 3 | 5 | 3 | 3 | 0 | 5 | 0 | 4 | 1 | 12 | 3 | 2 | 1 | 11 | 0 | 3 | 0 | 2 | 1 | 10 | 3 | 16 | 1 | 9 | 0 | 1 | 0 | 0 | 1 | 8
+PIN | nRD | 64 | 0 | N/A | 88 | 11 | 2 | 1 | 2 | 4 | 2 | 7 | 2 | 17 | 3 | 0 | 3 | 15 | 3 | 4 | 3 | 1 | 2 | 13 | 2 | 10 | 2 | 8
+PIN | nIORQ | 64 | 0 | N/A | 83 | 11 | 2 | 1 | 2 | 4 | 2 | 7 | 2 | 17 | 3 | 0 | 3 | 15 | 3 | 4 | 3 | 1 | 2 | 13 | 2 | 10 | 2 | 8
+PIN | A0 | 64 | 0 | N/A | 52 | 11 | 2 | 1 | 2 | 4 | 2 | 7 | 2 | 17 | 3 | 0 | 3 | 15 | 3 | 4 | 3 | 1 | 2 | 13 | 2 | 10 | 2 | 8
+PIN | CLK | 64 | 0 | N/A | 12 | 43 | 1 | 7 | 1 | 17 | 1 | 16 | 3 | 14 | 3 | 13 | 0 | 17 | 0 | 16 | 0 | 15 | 3 | 17 | 3 | 12 | 0 | 14 | 0 | 13 | 0 | 12 | 3 | 11 | 3 | 10 | 0 | 11 | 0 | 10 | 1 | 15 | 3 | 9 | 3 | 8 | 0 | 9 | 0 | 8 | 1 | 14 | 3 | 7 | 3 | 6 | 0 | 7 | 0 | 6 | 1 | 13 | 3 | 5 | 3 | 3 | 0 | 5 | 0 | 4 | 1 | 12 | 3 | 2 | 1 | 11 | 0 | 3 | 0 | 2 | 1 | 10 | 3 | 16 | 1 | 9 | 0 | 1 | 0 | 0 | 1 | 8
+PIN | C<0> | 64 | 0 | N/A | 11 | 8 | 3 | 14 | 3 | 17 | 3 | 11 | 3 | 9 | 3 | 7 | 3 | 5 | 3 | 2 | 3 | 16
+PIN | C<1> | 64 | 0 | N/A | 10 | 8 | 3 | 13 | 3 | 12 | 3 | 10 | 3 | 8 | 3 | 6 | 3 | 3 | 1 | 11 | 1 | 9
+PIN | C<2> | 64 | 0 | N/A | 9 | 8 | 0 | 17 | 0 | 14 | 0 | 11 | 0 | 9 | 0 | 7 | 0 | 5 | 0 | 3 | 0 | 1
+PIN | C<3> | 64 | 0 | N/A | 7 | 8 | 0 | 16 | 0 | 13 | 0 | 10 | 0 | 8 | 0 | 6 | 0 | 4 | 0 | 2 | 0 | 0
+PIN | C<4> | 64 | 0 | N/A | 3 | 8 | 0 | 15 | 0 | 12 | 1 | 15 | 1 | 14 | 1 | 13 | 1 | 12 | 1 | 10 | 1 | 8
+PIN | A<15> | 64 | 0 | N/A | 65 | 5 | 2 | 4 | 2 | 7 | 2 | 17 | 3 | 0 | 3 | 15
+PIN | A<14> | 64 | 0 | N/A | 68 | 5 | 2 | 4 | 2 | 7 | 2 | 17 | 3 | 0 | 3 | 15
+PIN | A<13> | 64 | 0 | N/A | 72 | 5 | 2 | 4 | 2 | 7 | 2 | 17 | 3 | 0 | 3 | 15
+PIN | A<12> | 64 | 0 | N/A | 82 | 5 | 2 | 4 | 2 | 7 | 2 | 17 | 3 | 0 | 3 | 15
+PIN | A<11> | 64 | 0 | N/A | 87 | 5 | 2 | 3 | 2 | 6 | 2 | 16 | 3 | 14 | 3 | 1
+PIN | A<9> | 64 | 0 | N/A | 90 | 5 | 2 | 3 | 2 | 6 | 2 | 16 | 3 | 14 | 3 | 1
+PIN | A<10> | 64 | 0 | N/A | 89 | 5 | 3 | 1 | 2 | 5 | 2 | 16 | 2 | 8 | 3 | 16
+PIN | A<8> | 64 | 0 | N/A | 92 | 5 | 3 | 1 | 2 | 5 | 2 | 16 | 2 | 8 | 3 | 16
+PIN | TEST1 | 536871040 | 0 | N/A | 29
+PIN | TEST2 | 536871040 | 0 | N/A | 31
+PIN | TEST3 | 536871040 | 0 | N/A | 33
+PIN | D<4> | 536871040 | 0 | N/A | 63
+PIN | D<3> | 536871040 | 0 | N/A | 62
+PIN | D<2> | 536871040 | 0 | N/A | 49
+PIN | D<1> | 536871040 | 0 | N/A | 46
+PIN | D<0> | 536871040 | 0 | N/A | 38

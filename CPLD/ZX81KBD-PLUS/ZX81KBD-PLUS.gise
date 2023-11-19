@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<generated_project xmlns="http://www.xilinx.com/XMLSchema" xmlns:xil_pn="http://www.xilinx.com/XMLSchema">
+
+  <!--                                                          -->
+
+  <!--             For tool use only. Do not edit.              -->
+
+  <!--                                                          -->
+
+  <!-- ProjectNavigator created generated project file.         -->
+
+  <!-- For use in tracking generated file and other information -->
+
+  <!-- allowing preservation of process status.                 -->
+
+  <!--                                                          -->
+
+  <!-- Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved. -->
+
+  <version xmlns="http://www.xilinx.com/XMLSchema">11.1</version>
+
+  <sourceproject xmlns="http://www.xilinx.com/XMLSchema" xil_pn:fileType="FILE_XISE" xil_pn:name="ZX81KBD-PLUS.xise"/>
+
+  <files xmlns="http://www.xilinx.com/XMLSchema">
+    <file xil_pn:fileType="FILE_DIRECTORY" xil_pn:name="_ngo"/>
+    <file xil_pn:fileType="FILE_XMSGS" xil_pn:name="_xmsgs/ngdbuild.xmsgs"/>
+    <file xil_pn:fileType="FILE_XMSGS" xil_pn:name="_xmsgs/xst.xmsgs"/>
+    <file xil_pn:fileType="FILE_LOG" xil_pn:name="fuse.log"/>
+    <file xil_pn:fileType="FILE_DIRECTORY" xil_pn:name="isim"/>
+    <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_CMD" xil_pn:name="isim.cmd"/>
+    <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_LOG" xil_pn:name="isim.log"/>
+    <file xil_pn:fileType="FILE_FITTER_REPORT" xil_pn:name="webtalk_pn.xml"/>
+    <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_INI" xil_pn:name="xilinxsim.ini"/>
+    <file xil_pn:fileType="FILE_DIRECTORY" xil_pn:name="xlnx_auto_0_xdb"/>
+    <file xil_pn:fileType="FILE_DIRECTORY" xil_pn:name="xst"/>
+    <file xil_pn:fileType="FILE_CMD_LOG" xil_pn:name="zx81kbd.cmd_log"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_LSO" xil_pn:name="zx81kbd.lso"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="zx81kbd.prj"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_REPORT" xil_pn:name="zx81kbd.syr"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST" xil_pn:name="zx81kbd.xst"/>
+    <file xil_pn:fileType="FILE_HTML" xil_pn:name="zx81kbd_summary.html"/>
+    <file xil_pn:fileType="FILE_XRPT" xil_pn:name="zx81kbd_xst.xrpt"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGDBUILD_LOG" xil_pn:name="zx81kbdplus.bld"/>
+    <file xil_pn:fileType="FILE_CMD_LOG" xil_pn:name="zx81kbdplus.cmd_log"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_GYD" xil_pn:name="zx81kbdplus.gyd"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_JEDEC" xil_pn:name="zx81kbdplus.jed"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_PIN2UCF_REPORT" xil_pn:name="zx81kbdplus.lck"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_LSO" xil_pn:name="zx81kbdplus.lso"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_MFD" xil_pn:name="zx81kbdplus.mfd"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGA" xil_pn:name="zx81kbdplus.nga"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGC" xil_pn:name="zx81kbdplus.ngc"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGD" xil_pn:name="zx81kbdplus.ngd"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGR" xil_pn:name="zx81kbdplus.ngr"/>
+    <file xil_pn:fileType="FILE_PAD_MISC" xil_pn:name="zx81kbdplus.pad"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_PNX" xil_pn:name="zx81kbdplus.pnx"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="zx81kbdplus.prj"/>
+    <file xil_pn:fileType="FILE_FITTER_REPORT" xil_pn:name="zx81kbdplus.rpt"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_STX" xil_pn:name="zx81kbdplus.stx"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_REPORT" xil_pn:name="zx81kbdplus.syr"/>
+    <file xil_pn:fileType="FILE_FITTER_REPORT" xil_pn:name="zx81kbdplus.tim"/>
+    <file xil_pn:fileType="FILE_FITTER_REPORT" xil_pn:name="zx81kbdplus.tspec"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_VM6" xil_pn:name="zx81kbdplus.vm6"/>
+    <file xil_pn:fileType="FILE_FITTER_REPORT" xil_pn:name="zx81kbdplus.xml"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST" xil_pn:name="zx81kbdplus.xst"/>
+    <file xil_pn:fileType="FILE_FITTER_REPORT" xil_pn:name="zx81kbdplus_build.xml"/>
+    <file xil_pn:fileType="FILE_HTML" xil_pn:name="zx81kbdplus_envsettings.html"/>
+    <file xil_pn:fileType="FILE_DIRECTORY" xil_pn:name="zx81kbdplus_html"/>
+    <file xil_pn:fileType="FILE_XRPT" xil_pn:name="zx81kbdplus_ngdbuild.xrpt"/>
+    <file xil_pn:fileType="FILE_PAD_EXCEL_REPORT" xil_pn:name="zx81kbdplus_pad.csv"/>
+    <file xil_pn:fileType="FILE_HTML" xil_pn:name="zx81kbdplus_summary.html"/>
+    <file xil_pn:fileType="FILE_XRPT" xil_pn:name="zx81kbdplus_xst.xrpt"/>
+    <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="zx81kbdtb_beh.prj"/>
+    <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_ISIM_EXE" xil_pn:name="zx81kbdtb_isim_beh.exe"/>
+    <file xil_pn:fileType="FILE_ISIM_MISC" xil_pn:name="zx81kbdtb_isim_beh.wdb"/>
+    <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="zx81kbdtb_stx_beh.prj"/>
+  </files>
+
+  <transforms xmlns="http://www.xilinx.com/XMLSchema">
+    <transform xil_pn:end_ts="1699525203" xil_pn:name="TRAN_copyInitialToAbstractSimulation" xil_pn:start_ts="1699525203">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1699559250" xil_pn:in_ck="3729736965870059687" xil_pn:name="TRAN_copyAbstractToPostAbstractSimulation" xil_pn:start_ts="1699559250">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForInputs"/>
+      <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="InputChanged"/>
+      <status xil_pn:value="OutputChanged"/>
+      <outfile xil_pn:name="zx81kbd-plus.v"/>
+      <outfile xil_pn:name="zx81kbdtb.v"/>
+    </transform>
+    <transform xil_pn:end_ts="1699525861" xil_pn:name="TRAN_schematicsToHdlSim" xil_pn:prop_ck="3897336992811552553" xil_pn:start_ts="1699525861">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1699559266" xil_pn:in_ck="3729736965870059687" xil_pn:name="TRAN_copyPostAbstractToPreSimulation" xil_pn:start_ts="1699559266">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForInputs"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
+      <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="InputChanged"/>
+      <status xil_pn:value="OutputChanged"/>
+      <outfile xil_pn:name="zx81kbd-plus.v"/>
+      <outfile xil_pn:name="zx81kbdtb.v"/>
+    </transform>
+    <transform xil_pn:end_ts="1699559272" xil_pn:in_ck="3729736965870059687" xil_pn:name="TRAN_ISimulateBehavioralModelRunFuse" xil_pn:prop_ck="5158811858655524527" xil_pn:start_ts="1699559266">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForInputs"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
+      <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="InputChanged"/>
+      <status xil_pn:value="OutputChanged"/>
+      <outfile xil_pn:name="fuse.log"/>
+      <outfile xil_pn:name="isim"/>
+      <outfile xil_pn:name="isim.log"/>
+      <outfile xil_pn:name="xilinxsim.ini"/>
+      <outfile xil_pn:name="zx81kbdtb_beh.prj"/>
+      <outfile xil_pn:name="zx81kbdtb_isim_beh.exe"/>
+    </transform>
+    <transform xil_pn:end_ts="1699559273" xil_pn:in_ck="-6354175505767060463" xil_pn:name="TRAN_ISimulateBehavioralModel" xil_pn:prop_ck="-7532571684747399214" xil_pn:start_ts="1699559272">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
+      <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="OutputChanged"/>
+      <outfile xil_pn:name="isim.cmd"/>
+      <outfile xil_pn:name="isim.log"/>
+      <outfile xil_pn:name="zx81kbdtb_isim_beh.wdb"/>
+    </transform>
+    <transform xil_pn:end_ts="1699471437" xil_pn:name="TRAN_copyInitialToXSTAbstractSynthesis" xil_pn:start_ts="1699471437">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1699471487" xil_pn:name="TRAN_schematicsToHdl" xil_pn:prop_ck="3250396376584430263" xil_pn:start_ts="1699471486">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1699642048" xil_pn:in_ck="451414870391979937" xil_pn:name="TRANEXT_xstsynthesize_xc9500xl" xil_pn:prop_ck="-7141643325980136416" xil_pn:start_ts="1699642035">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <outfile xil_pn:name="_xmsgs/xst.xmsgs"/>
+      <outfile xil_pn:name="webtalk_pn.xml"/>
+      <outfile xil_pn:name="xst"/>
+      <outfile xil_pn:name="zx81kbdplus.lso"/>
+      <outfile xil_pn:name="zx81kbdplus.ngc"/>
+      <outfile xil_pn:name="zx81kbdplus.ngr"/>
+      <outfile xil_pn:name="zx81kbdplus.prj"/>
+      <outfile xil_pn:name="zx81kbdplus.stx"/>
+      <outfile xil_pn:name="zx81kbdplus.syr"/>
+      <outfile xil_pn:name="zx81kbdplus.xst"/>
+      <outfile xil_pn:name="zx81kbdplus_xst.xrpt"/>
+    </transform>
+    <transform xil_pn:end_ts="1699662953" xil_pn:in_ck="-3550050500156962276" xil_pn:name="TRAN_compileBCD2" xil_pn:prop_ck="-5794700254570337262" xil_pn:start_ts="1699662953">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1699662961" xil_pn:in_ck="1267215682137006130" xil_pn:name="TRAN_ngdbuild" xil_pn:prop_ck="920057667651985957" xil_pn:start_ts="1699662953">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <outfile xil_pn:name="_ngo"/>
+      <outfile xil_pn:name="_xmsgs/ngdbuild.xmsgs"/>
+      <outfile xil_pn:name="zx81kbdplus.bld"/>
+      <outfile xil_pn:name="zx81kbdplus.ngd"/>
+      <outfile xil_pn:name="zx81kbdplus_ngdbuild.xrpt"/>
+    </transform>
+    <transform xil_pn:end_ts="1699662981" xil_pn:in_ck="-3550050500156969769" xil_pn:name="TRANEXT_vm6File_xc9500xl" xil_pn:prop_ck="7648318139266621966" xil_pn:start_ts="1699662961">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="WarningsGenerated"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <outfile xil_pn:name="zx81kbdplus.gyd"/>
+      <outfile xil_pn:name="zx81kbdplus.mfd"/>
+      <outfile xil_pn:name="zx81kbdplus.nga"/>
+      <outfile xil_pn:name="zx81kbdplus.pad"/>
+      <outfile xil_pn:name="zx81kbdplus.pnx"/>
+      <outfile xil_pn:name="zx81kbdplus.rpt"/>
+      <outfile xil_pn:name="zx81kbdplus.tim"/>
+      <outfile xil_pn:name="zx81kbdplus.tspec"/>
+      <outfile xil_pn:name="zx81kbdplus.vm6"/>
+      <outfile xil_pn:name="zx81kbdplus.xml"/>
+      <outfile xil_pn:name="zx81kbdplus_build.xml"/>
+      <outfile xil_pn:name="zx81kbdplus_html"/>
+      <outfile xil_pn:name="zx81kbdplus_pad.csv"/>
+    </transform>
+    <transform xil_pn:end_ts="1699662987" xil_pn:in_ck="-3550050500156960905" xil_pn:name="TRANEXT_crtProg_xc9500" xil_pn:prop_ck="-6294026017969277533" xil_pn:start_ts="1699662981">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <outfile xil_pn:name="zx81kbdplus.jed"/>
+    </transform>
+    <transform xil_pn:end_ts="1699474191" xil_pn:in_ck="-3550050500156960905" xil_pn:name="TRAN_timRpt" xil_pn:prop_ck="111903974446" xil_pn:start_ts="1699474187">
+      <status xil_pn:value="AbortedRun"/>
+      <status xil_pn:value="WarningsGenerated"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForInputs"/>
+      <status xil_pn:value="InputChanged"/>
+    </transform>
+    <transform xil_pn:end_ts="1699523731" xil_pn:in_ck="-8567166971294991554" xil_pn:name="TRAN_lockPins" xil_pn:prop_ck="192503003661904336" xil_pn:start_ts="1699523728">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForInputs"/>
+      <status xil_pn:value="InputChanged"/>
+      <outfile xil_pn:name="zx81kbdplus.lck"/>
+    </transform>
+  </transforms>
+
+</generated_project>

@@ -1,0 +1,32 @@
+
+#PINLOCK_BEGIN
+
+#Thu Nov 09 10:55:29 2023
+
+NET "A0"             LOC =  "S:PIN22";
+NET "A<8>"           LOC =  "S:PIN39";
+NET "A<9>"           LOC =  "S:PIN38";
+NET "A<10>"          LOC =  "S:PIN37";
+NET "A<11>"          LOC =  "S:PIN35";
+NET "A<12>"          LOC =  "S:PIN33";
+NET "A<13>"          LOC =  "S:PIN29";
+NET "A<14>"          LOC =  "S:PIN28";
+NET "A<15>"          LOC =  "S:PIN27";
+NET "CLK"            LOC =  "S:PIN2";
+NET "C<0>"           LOC =  "S:PIN1";
+NET "C<1>"           LOC =  "S:PIN44";
+NET "C<2>"           LOC =  "S:PIN43";
+NET "C<3>"           LOC =  "S:PIN42";
+NET "C<4>"           LOC =  "S:PIN40";
+NET "RST"            LOC =  "S:PIN3";
+NET "nIORQ"          LOC =  "S:PIN34";
+NET "nRD"            LOC =  "S:PIN36";
+NET "D<4>"           LOC =  "S:PIN26";
+NET "D<3>"           LOC =  "S:PIN25";
+NET "D<2>"           LOC =  "S:PIN19";
+NET "D<1>"           LOC =  "S:PIN18";
+NET "D<0>"           LOC =  "S:PIN14";
+NET "TEST1"          LOC =  "S:PIN11";
+NET "TEST2"          LOC =  "S:PIN12";
+NET "TEST3"          LOC =  "S:PIN13";
+#PINLOCK_END

@@ -1,0 +1,1 @@
+-intstyle "ise" -incremental -lib "uni9000_ver" -lib "aim_ver" -lib "cpld_ver" -lib "xilinxcorelib_ver" -o "Z:/OneDrive/Documentos/GitHub/ZX81KBD-PLUS/ZX81KBD-PLUS/zx81kbdtb_isim_beh.exe" -prj "Z:/OneDrive/Documentos/GitHub/ZX81KBD-PLUS/ZX81KBD-PLUS/zx81kbdtb_beh.prj" "work.zx81kbdtb" "work.glbl" 

@@ -1,0 +1,213 @@
+xst -intstyle ise -ifn "Z:/OneDrive/Documentos/GitHub/ZX81KBD-PLUS/ZX81KBD-PLUS/zx81kbdplus.xst" -ofn "Z:/OneDrive/Documentos/GitHub/ZX81KBD-PLUS/ZX81KBD-PLUS/zx81kbdplus.syr" 
+ngdbuild -intstyle ise -dd _ngo -i -p xc9572xl-PC44-10 zx81kbdplus.ngc zx81kbdplus.ngd  
+xst -intstyle ise -ifn "Z:/OneDrive/Documentos/GitHub/ZX81KBD-PLUS/ZX81KBD-PLUS/zx81kbdplus.xst" -ofn "Z:/OneDrive/Documentos/GitHub/ZX81KBD-PLUS/ZX81KBD-PLUS/zx81kbdplus.syr" 
+xst -intstyle ise -ifn "Z:/OneDrive/Documentos/GitHub/ZX81KBD-PLUS/ZX81KBD-PLUS/zx81kbdplus.xst" -ofn "Z:/OneDrive/Documentos/GitHub/ZX81KBD-PLUS/ZX81KBD-PLUS/zx81kbdplus.syr" 
+xst -intstyle ise -ifn "Z:/OneDrive/Documentos/GitHub/ZX81KBD-PLUS/ZX81KBD-PLUS/zx81kbdplus.xst" -ofn "Z:/OneDrive/Documentos/GitHub/ZX81KBD-PLUS/ZX81KBD-PLUS/zx81kbdplus.syr" 
+xst -intstyle ise -ifn "Z:/OneDrive/Documentos/GitHub/ZX81KBD-PLUS/ZX81KBD-PLUS/zx81kbdplus.xst" -ofn "Z:/OneDrive/Documentos/GitHub/ZX81KBD-PLUS/ZX81KBD-PLUS/zx81kbdplus.syr" 
+xst -intstyle ise -ifn "Z:/OneDrive/Documentos/GitHub/ZX81KBD-PLUS/ZX81KBD-PLUS/zx81kbdplus.xst" -ofn "Z:/OneDrive/Documentos/GitHub/ZX81KBD-PLUS/ZX81KBD-PLUS/zx81kbdplus.syr" 
+xst -intstyle ise -ifn "Z:/OneDrive/Documentos/GitHub/ZX81KBD-PLUS/ZX81KBD-PLUS/zx81kbdplus.xst" -ofn "Z:/OneDrive/Documentos/GitHub/ZX81KBD-PLUS/ZX81KBD-PLUS/zx81kbdplus.syr" 
+ngdbuild -intstyle ise -dd _ngo -i -p xc9572xl-PC44-10 zx81kbdplus.ngc zx81kbdplus.ngd  
+cpldfit -intstyle ise -p xc9572xl-10-PC44 -ofmt vhdl -optimize speed -htmlrpt -loc on -slew fast -init low -inputs 54 -pterms 25 -unused float -power std -terminate keeper zx81kbdplus.ngd 
+XSLTProcess zx81kbdplus_build.xml 
+tsim -intstyle ise zx81kbdplus zx81kbdplus.nga 
+taengine -intstyle ise -f zx81kbdplus -w --format html1 -l zx81kbdplus_html/tim/timing_report.htm 
+hprep6 -s IEEE1149 -n zx81kbdplus -i zx81kbdplus 
+xst -intstyle ise -ifn "Z:/OneDrive/Documentos/GitHub/ZX81KBD-PLUS/ZX81KBD-PLUS/zx81kbdplus.xst" -ofn "Z:/OneDrive/Documentos/GitHub/ZX81KBD-PLUS/ZX81KBD-PLUS/zx81kbdplus.syr" 
+ngdbuild -intstyle ise -dd _ngo -i -p xc9572xl-PC44-10 zx81kbdplus.ngc zx81kbdplus.ngd  
+cpldfit -intstyle ise -p xc9572xl-10-PC44 -ofmt vhdl -optimize speed -htmlrpt -loc on -slew fast -init low -inputs 54 -pterms 25 -unused float -power std -terminate keeper zx81kbdplus.ngd 
+XSLTProcess zx81kbdplus_build.xml 
+tsim -intstyle ise zx81kbdplus zx81kbdplus.nga 
+hprep6 -s IEEE1149 -n zx81kbdplus -i zx81kbdplus 
+xst -intstyle ise -ifn "Z:/OneDrive/Documentos/GitHub/ZX81KBD-PLUS/ZX81KBD-PLUS/zx81kbdplus.xst" -ofn "Z:/OneDrive/Documentos/GitHub/ZX81KBD-PLUS/ZX81KBD-PLUS/zx81kbdplus.syr" 
+ngdbuild -intstyle ise -dd _ngo -i -p xc9572xl-PC44-10 zx81kbdplus.ngc zx81kbdplus.ngd  
+cpldfit -intstyle ise -p xc9572xl-10-PC44 -ofmt vhdl -optimize speed -htmlrpt -loc on -slew fast -init low -inputs 54 -pterms 25 -unused float -power std -terminate keeper zx81kbdplus.ngd 
+XSLTProcess zx81kbdplus_build.xml 
+tsim -intstyle ise zx81kbdplus zx81kbdplus.nga 
+hprep6 -s IEEE1149 -n zx81kbdplus -i zx81kbdplus 
+xst -intstyle ise -ifn "Z:/OneDrive/Documentos/GitHub/ZX81KBD-PLUS/ZX81KBD-PLUS/zx81kbdplus.xst" -ofn "Z:/OneDrive/Documentos/GitHub/ZX81KBD-PLUS/ZX81KBD-PLUS/zx81kbdplus.syr" 
+xst -intstyle ise -ifn "Z:/OneDrive/Documentos/GitHub/ZX81KBD-PLUS/ZX81KBD-PLUS/zx81kbdplus.xst" -ofn "Z:/OneDrive/Documentos/GitHub/ZX81KBD-PLUS/ZX81KBD-PLUS/zx81kbdplus.syr" 
+xst -intstyle ise -ifn "Z:/OneDrive/Documentos/GitHub/ZX81KBD-PLUS/ZX81KBD-PLUS/zx81kbdplus.xst" -ofn "Z:/OneDrive/Documentos/GitHub/ZX81KBD-PLUS/ZX81KBD-PLUS/zx81kbdplus.syr" 
+xst -intstyle ise -ifn "Z:/OneDrive/Documentos/GitHub/ZX81KBD-PLUS/ZX81KBD-PLUS/zx81kbdplus.xst" -ofn "Z:/OneDrive/Documentos/GitHub/ZX81KBD-PLUS/ZX81KBD-PLUS/zx81kbdplus.syr" 
+xst -intstyle ise -ifn "Z:/OneDrive/Documentos/GitHub/ZX81KBD-PLUS/ZX81KBD-PLUS/zx81kbdplus.xst" -ofn "Z:/OneDrive/Documentos/GitHub/ZX81KBD-PLUS/ZX81KBD-PLUS/zx81kbdplus.syr" 
+xst -intstyle ise -ifn "Z:/OneDrive/Documentos/GitHub/ZX81KBD-PLUS/ZX81KBD-PLUS/zx81kbdplus.xst" -ofn "Z:/OneDrive/Documentos/GitHub/ZX81KBD-PLUS/ZX81KBD-PLUS/zx81kbdplus.syr" 
+xst -intstyle ise -ifn "Z:/OneDrive/Documentos/GitHub/ZX81KBD-PLUS/ZX81KBD-PLUS/zx81kbdplus.xst" -ofn "Z:/OneDrive/Documentos/GitHub/ZX81KBD-PLUS/ZX81KBD-PLUS/zx81kbdplus.syr" 
+xst -intstyle ise -ifn "Z:/OneDrive/Documentos/GitHub/ZX81KBD-PLUS/ZX81KBD-PLUS/zx81kbdplus.xst" -ofn "Z:/OneDrive/Documentos/GitHub/ZX81KBD-PLUS/ZX81KBD-PLUS/zx81kbdplus.syr" 
+xst -intstyle ise -ifn "Z:/OneDrive/Documentos/GitHub/ZX81KBD-PLUS/ZX81KBD-PLUS/zx81kbdplus.xst" -ofn "Z:/OneDrive/Documentos/GitHub/ZX81KBD-PLUS/ZX81KBD-PLUS/zx81kbdplus.syr" 
+xst -intstyle ise -ifn "Z:/OneDrive/Documentos/GitHub/ZX81KBD-PLUS/ZX81KBD-PLUS/zx81kbdplus.xst" -ofn "Z:/OneDrive/Documentos/GitHub/ZX81KBD-PLUS/ZX81KBD-PLUS/zx81kbdplus.syr" 
+xst -intstyle ise -ifn "Z:/OneDrive/Documentos/GitHub/ZX81KBD-PLUS/ZX81KBD-PLUS/zx81kbdplus.xst" -ofn "Z:/OneDrive/Documentos/GitHub/ZX81KBD-PLUS/ZX81KBD-PLUS/zx81kbdplus.syr" 
+xst -intstyle ise -ifn "Z:/OneDrive/Documentos/GitHub/ZX81KBD-PLUS/ZX81KBD-PLUS/zx81kbdplus.xst" -ofn "Z:/OneDrive/Documentos/GitHub/ZX81KBD-PLUS/ZX81KBD-PLUS/zx81kbdplus.syr" 
+xst -intstyle ise -ifn "Z:/OneDrive/Documentos/GitHub/ZX81KBD-PLUS/ZX81KBD-PLUS/zx81kbdplus.xst" -ofn "Z:/OneDrive/Documentos/GitHub/ZX81KBD-PLUS/ZX81KBD-PLUS/zx81kbdplus.syr" 
+xst -intstyle ise -ifn "Z:/OneDrive/Documentos/GitHub/ZX81KBD-PLUS/ZX81KBD-PLUS/zx81kbdplus.xst" -ofn "Z:/OneDrive/Documentos/GitHub/ZX81KBD-PLUS/ZX81KBD-PLUS/zx81kbdplus.syr" 
+xst -intstyle ise -ifn "Z:/OneDrive/Documentos/GitHub/ZX81KBD-PLUS/ZX81KBD-PLUS/zx81kbdplus.xst" -ofn "Z:/OneDrive/Documentos/GitHub/ZX81KBD-PLUS/ZX81KBD-PLUS/zx81kbdplus.syr" 
+ngdbuild -intstyle ise -dd _ngo -i -p xc9572xl-PC44-10 zx81kbdplus.ngc zx81kbdplus.ngd  
+cpldfit -intstyle ise -p xc9572xl-10-PC44 -ofmt vhdl -optimize speed -htmlrpt -loc on -slew fast -init low -inputs 54 -pterms 25 -unused float -power std -terminate keeper zx81kbdplus.ngd 
+XSLTProcess zx81kbdplus_build.xml 
+tsim -intstyle ise zx81kbdplus zx81kbdplus.nga 
+hprep6 -s IEEE1149 -n zx81kbdplus -i zx81kbdplus 
+xst -intstyle ise -ifn "Z:/OneDrive/Documentos/GitHub/ZX81KBD-PLUS/ZX81KBD-PLUS/zx81kbdplus.xst" -ofn "Z:/OneDrive/Documentos/GitHub/ZX81KBD-PLUS/ZX81KBD-PLUS/zx81kbdplus.syr" 
+xst -intstyle ise -ifn "Z:/OneDrive/Documentos/GitHub/ZX81KBD-PLUS/ZX81KBD-PLUS/zx81kbdplus.xst" -ofn "Z:/OneDrive/Documentos/GitHub/ZX81KBD-PLUS/ZX81KBD-PLUS/zx81kbdplus.syr" 
+ngdbuild -intstyle ise -dd _ngo -i -p xc9572xl-PC44-10 zx81kbdplus.ngc zx81kbdplus.ngd  
+cpldfit -intstyle ise -p xc9572xl-10-PC44 -ofmt vhdl -optimize speed -htmlrpt -loc on -slew fast -init low -inputs 54 -pterms 25 -unused float -power std -terminate keeper zx81kbdplus.ngd 
+XSLTProcess zx81kbdplus_build.xml 
+tsim -intstyle ise zx81kbdplus zx81kbdplus.nga 
+hprep6 -s IEEE1149 -n zx81kbdplus -i zx81kbdplus 
+xst -intstyle ise -ifn "Z:/OneDrive/Documentos/GitHub/ZX81KBD-PLUS/ZX81KBD-PLUS/zx81kbdplus.xst" -ofn "Z:/OneDrive/Documentos/GitHub/ZX81KBD-PLUS/ZX81KBD-PLUS/zx81kbdplus.syr" 
+ngdbuild -intstyle ise -dd _ngo -i -p xc9572xl-PC44-10 zx81kbdplus.ngc zx81kbdplus.ngd  
+cpldfit -intstyle ise -p xc9572xl-10-PC44 -ofmt vhdl -optimize speed -htmlrpt -loc on -slew fast -init low -inputs 54 -pterms 25 -unused float -power std -terminate keeper zx81kbdplus.ngd 
+XSLTProcess zx81kbdplus_build.xml 
+tsim -intstyle ise zx81kbdplus zx81kbdplus.nga 
+hprep6 -s IEEE1149 -n zx81kbdplus -i zx81kbdplus 
+xst -intstyle ise -ifn "Z:/OneDrive/Documentos/GitHub/ZX81KBD-PLUS/ZX81KBD-PLUS/zx81kbdplus.xst" -ofn "Z:/OneDrive/Documentos/GitHub/ZX81KBD-PLUS/ZX81KBD-PLUS/zx81kbdplus.syr" 
+ngdbuild -intstyle ise -dd _ngo -i -p xc9572xl-PC44-10 zx81kbdplus.ngc zx81kbdplus.ngd  
+cpldfit -intstyle ise -p xc9572xl-10-PC44 -ofmt vhdl -optimize speed -htmlrpt -loc on -slew fast -init low -inputs 54 -pterms 25 -unused float -power std -terminate keeper zx81kbdplus.ngd 
+XSLTProcess zx81kbdplus_build.xml 
+tsim -intstyle ise zx81kbdplus zx81kbdplus.nga 
+hprep6 -s IEEE1149 -n zx81kbdplus -i zx81kbdplus 
+pin2ucf zx81kbdplus.gyd -o Z:/OneDrive/Documentos/GitHub/ZX81KBD-PLUS/ZX81KBD-PLUS/zx81kbdplus.ucf -r zx81kbdplus.lck 
+ngdbuild -intstyle ise -dd _ngo -uc zx81kbdplus.ucf -p xc9572xl-PC44-10 zx81kbdplus.ngc zx81kbdplus.ngd  
+cpldfit -intstyle ise -p xc9572xl-10-PC44 -ofmt vhdl -optimize speed -htmlrpt -loc on -slew fast -init low -inputs 54 -pterms 25 -unused float -power std -terminate keeper zx81kbdplus.ngd 
+XSLTProcess zx81kbdplus_build.xml 
+tsim -intstyle ise zx81kbdplus zx81kbdplus.nga 
+hprep6 -s IEEE1149 -n zx81kbdplus -i zx81kbdplus 
+xst -intstyle ise -ifn "Z:/OneDrive/Documentos/GitHub/ZX81KBD-PLUS/ZX81KBD-PLUS/zx81kbdplus.xst" -ofn "Z:/OneDrive/Documentos/GitHub/ZX81KBD-PLUS/ZX81KBD-PLUS/zx81kbdplus.syr" 
+ngdbuild -intstyle ise -dd _ngo -uc zx81kbdplus.ucf -p xc9572xl-PC44-10 zx81kbdplus.ngc zx81kbdplus.ngd  
+cpldfit -intstyle ise -p xc9572xl-10-PC44 -ofmt vhdl -optimize speed -htmlrpt -loc on -slew fast -init low -inputs 54 -pterms 25 -unused float -power std -terminate keeper zx81kbdplus.ngd 
+XSLTProcess zx81kbdplus_build.xml 
+tsim -intstyle ise zx81kbdplus zx81kbdplus.nga 
+hprep6 -s IEEE1149 -n zx81kbdplus -i zx81kbdplus 
+xst -intstyle ise -ifn "Z:/OneDrive/Documentos/GitHub/ZX81KBD-PLUS/ZX81KBD-PLUS/zx81kbdplus.xst" -ofn "Z:/OneDrive/Documentos/GitHub/ZX81KBD-PLUS/ZX81KBD-PLUS/zx81kbdplus.syr" 
+ngdbuild -intstyle ise -dd _ngo -uc zx81kbdplus.ucf -p xc9572xl-PC44-10 zx81kbdplus.ngc zx81kbdplus.ngd  
+cpldfit -intstyle ise -p xc9572xl-10-PC44 -ofmt vhdl -optimize speed -htmlrpt -loc on -slew fast -init low -inputs 54 -pterms 25 -unused float -power std -terminate keeper zx81kbdplus.ngd 
+XSLTProcess zx81kbdplus_build.xml 
+tsim -intstyle ise zx81kbdplus zx81kbdplus.nga 
+hprep6 -s IEEE1149 -n zx81kbdplus -i zx81kbdplus 
+xst -intstyle ise -ifn "Z:/OneDrive/Documentos/GitHub/ZX81KBD-PLUS/ZX81KBD-PLUS/zx81kbdplus.xst" -ofn "Z:/OneDrive/Documentos/GitHub/ZX81KBD-PLUS/ZX81KBD-PLUS/zx81kbdplus.syr" 
+ngdbuild -intstyle ise -dd _ngo -uc zx81kbdplus.ucf -p xc9572xl-PC44-10 zx81kbdplus.ngc zx81kbdplus.ngd  
+cpldfit -intstyle ise -p xc9572xl-10-PC44 -ofmt vhdl -optimize speed -htmlrpt -loc on -slew fast -init low -inputs 54 -pterms 25 -unused float -power std -terminate keeper zx81kbdplus.ngd 
+XSLTProcess zx81kbdplus_build.xml 
+tsim -intstyle ise zx81kbdplus zx81kbdplus.nga 
+hprep6 -s IEEE1149 -n zx81kbdplus -i zx81kbdplus 
+xst -intstyle ise -ifn "Z:/OneDrive/Documentos/GitHub/ZX81KBD-PLUS/ZX81KBD-PLUS/zx81kbdplus.xst" -ofn "Z:/OneDrive/Documentos/GitHub/ZX81KBD-PLUS/ZX81KBD-PLUS/zx81kbdplus.syr" 
+ngdbuild -intstyle ise -dd _ngo -uc zx81kbdplus.ucf -p xc9572xl-PC44-10 zx81kbdplus.ngc zx81kbdplus.ngd  
+cpldfit -intstyle ise -p xc9572xl-10-PC44 -ofmt vhdl -optimize speed -htmlrpt -loc on -slew fast -init low -inputs 54 -pterms 25 -unused float -power std -terminate keeper zx81kbdplus.ngd 
+XSLTProcess zx81kbdplus_build.xml 
+tsim -intstyle ise zx81kbdplus zx81kbdplus.nga 
+hprep6 -s IEEE1149 -n zx81kbdplus -i zx81kbdplus 
+xst -intstyle ise -ifn "Z:/OneDrive/Documentos/GitHub/ZX81KBD-PLUS/ZX81KBD-PLUS/zx81kbdplus.xst" -ofn "Z:/OneDrive/Documentos/GitHub/ZX81KBD-PLUS/ZX81KBD-PLUS/zx81kbdplus.syr" 
+ngdbuild -intstyle ise -dd _ngo -uc zx81kbdplus.ucf -p xc9572xl-PC44-10 zx81kbdplus.ngc zx81kbdplus.ngd  
+cpldfit -intstyle ise -p xc9572xl-10-PC44 -ofmt vhdl -optimize speed -htmlrpt -loc on -slew fast -init low -inputs 54 -pterms 25 -unused float -power std -terminate keeper zx81kbdplus.ngd 
+XSLTProcess zx81kbdplus_build.xml 
+tsim -intstyle ise zx81kbdplus zx81kbdplus.nga 
+hprep6 -s IEEE1149 -n zx81kbdplus -i zx81kbdplus 
+xst -intstyle ise -ifn "Z:/OneDrive/Documentos/GitHub/ZX81KBD-PLUS/ZX81KBD-PLUS/zx81kbdplus.xst" -ofn "Z:/OneDrive/Documentos/GitHub/ZX81KBD-PLUS/ZX81KBD-PLUS/zx81kbdplus.syr" 
+ngdbuild -intstyle ise -dd _ngo -uc zx81kbdplus.ucf -p xc9572xl-PC44-10 zx81kbdplus.ngc zx81kbdplus.ngd  
+cpldfit -intstyle ise -p xc9572xl-10-PC44 -ofmt vhdl -optimize speed -htmlrpt -loc on -slew fast -init low -inputs 54 -pterms 25 -unused float -power std -terminate keeper zx81kbdplus.ngd 
+XSLTProcess zx81kbdplus_build.xml 
+tsim -intstyle ise zx81kbdplus zx81kbdplus.nga 
+hprep6 -s IEEE1149 -n zx81kbdplus -i zx81kbdplus 
+xst -intstyle ise -ifn "Z:/OneDrive/Documentos/GitHub/ZX81KBD-PLUS/ZX81KBD-PLUS/zx81kbdplus.xst" -ofn "Z:/OneDrive/Documentos/GitHub/ZX81KBD-PLUS/ZX81KBD-PLUS/zx81kbdplus.syr" 
+xst -intstyle ise -ifn "Z:/OneDrive/Documentos/GitHub/ZX81KBD-PLUS/ZX81KBD-PLUS/zx81kbdplus.xst" -ofn "Z:/OneDrive/Documentos/GitHub/ZX81KBD-PLUS/ZX81KBD-PLUS/zx81kbdplus.syr" 
+ngdbuild -intstyle ise -dd _ngo -uc zx81kbdplus.ucf -p xc9572xl-PC44-10 zx81kbdplus.ngc zx81kbdplus.ngd  
+cpldfit -intstyle ise -p xc9572xl-10-PC44 -ofmt vhdl -optimize speed -htmlrpt -loc on -slew fast -init low -inputs 54 -pterms 25 -unused float -power std -terminate keeper zx81kbdplus.ngd 
+XSLTProcess zx81kbdplus_build.xml 
+tsim -intstyle ise zx81kbdplus zx81kbdplus.nga 
+hprep6 -s IEEE1149 -n zx81kbdplus -i zx81kbdplus 
+xst -intstyle ise -ifn "Z:/OneDrive/Documentos/GitHub/ZX81KBD-PLUS/ZX81KBD-PLUS/zx81kbdplus.xst" -ofn "Z:/OneDrive/Documentos/GitHub/ZX81KBD-PLUS/ZX81KBD-PLUS/zx81kbdplus.syr" 
+ngdbuild -intstyle ise -dd _ngo -uc zx81kbdplus.ucf -p xc9572xl-PC44-10 zx81kbdplus.ngc zx81kbdplus.ngd  
+cpldfit -intstyle ise -p xc9572xl-10-PC44 -ofmt vhdl -optimize speed -htmlrpt -loc on -slew fast -init low -inputs 54 -pterms 25 -unused float -power std -terminate keeper zx81kbdplus.ngd 
+XSLTProcess zx81kbdplus_build.xml 
+tsim -intstyle ise zx81kbdplus zx81kbdplus.nga 
+hprep6 -s IEEE1149 -n zx81kbdplus -i zx81kbdplus 
+xst -intstyle ise -ifn "Z:/OneDrive/Documentos/GitHub/ZX81KBD-PLUS/ZX81KBD-PLUS/zx81kbdplus.xst" -ofn "Z:/OneDrive/Documentos/GitHub/ZX81KBD-PLUS/ZX81KBD-PLUS/zx81kbdplus.syr" 
+ngdbuild -intstyle ise -dd _ngo -uc zx81kbdplus.ucf -p xc9572xl-PC44-10 zx81kbdplus.ngc zx81kbdplus.ngd  
+cpldfit -intstyle ise -p xc9572xl-10-PC44 -ofmt vhdl -optimize speed -htmlrpt -loc on -slew fast -init low -inputs 54 -pterms 25 -unused float -power std -terminate keeper zx81kbdplus.ngd 
+XSLTProcess zx81kbdplus_build.xml 
+tsim -intstyle ise zx81kbdplus zx81kbdplus.nga 
+hprep6 -s IEEE1149 -n zx81kbdplus -i zx81kbdplus 
+xst -intstyle ise -ifn "Z:/OneDrive/Documentos/GitHub/ZX81KBD-PLUS/ZX81KBD-PLUS/zx81kbdplus.xst" -ofn "Z:/OneDrive/Documentos/GitHub/ZX81KBD-PLUS/ZX81KBD-PLUS/zx81kbdplus.syr" 
+xst -intstyle ise -ifn "Z:/OneDrive/Documentos/GitHub/ZX81KBD-PLUS/ZX81KBD-PLUS/zx81kbdplus.xst" -ofn "Z:/OneDrive/Documentos/GitHub/ZX81KBD-PLUS/ZX81KBD-PLUS/zx81kbdplus.syr" 
+xst -intstyle ise -ifn "Z:/OneDrive/Documentos/GitHub/ZX81KBD-PLUS/ZX81KBD-PLUS/zx81kbdplus.xst" -ofn "Z:/OneDrive/Documentos/GitHub/ZX81KBD-PLUS/ZX81KBD-PLUS/zx81kbdplus.syr" 
+xst -intstyle ise -ifn "Z:/OneDrive/Documentos/GitHub/ZX81KBD-PLUS/ZX81KBD-PLUS/zx81kbdplus.xst" -ofn "Z:/OneDrive/Documentos/GitHub/ZX81KBD-PLUS/ZX81KBD-PLUS/zx81kbdplus.syr" 
+ngdbuild -intstyle ise -dd _ngo -uc zx81kbdplus.ucf -p xc9572xl-PC44-10 zx81kbdplus.ngc zx81kbdplus.ngd  
+cpldfit -intstyle ise -p xc9572xl-10-PC44 -ofmt vhdl -optimize speed -htmlrpt -loc on -slew fast -init low -inputs 54 -pterms 25 -unused float -power std -terminate keeper zx81kbdplus.ngd 
+XSLTProcess zx81kbdplus_build.xml 
+tsim -intstyle ise zx81kbdplus zx81kbdplus.nga 
+hprep6 -s IEEE1149 -n zx81kbdplus -i zx81kbdplus 
+xst -intstyle ise -ifn "Z:/OneDrive/Documentos/GitHub/ZX81KBD-PLUS/ZX81KBD-PLUS/zx81kbdplus.xst" -ofn "Z:/OneDrive/Documentos/GitHub/ZX81KBD-PLUS/ZX81KBD-PLUS/zx81kbdplus.syr" 
+xst -intstyle ise -ifn "Z:/OneDrive/Documentos/GitHub/ZX81KBD-PLUS/ZX81KBD-PLUS/zx81kbdplus.xst" -ofn "Z:/OneDrive/Documentos/GitHub/ZX81KBD-PLUS/ZX81KBD-PLUS/zx81kbdplus.syr" 
+xst -intstyle ise -ifn "Z:/OneDrive/Documentos/GitHub/ZX81KBD-PLUS/ZX81KBD-PLUS/zx81kbdplus.xst" -ofn "Z:/OneDrive/Documentos/GitHub/ZX81KBD-PLUS/ZX81KBD-PLUS/zx81kbdplus.syr" 
+xst -intstyle ise -ifn "Z:/OneDrive/Documentos/GitHub/ZX81KBD-PLUS/ZX81KBD-PLUS/zx81kbdplus.xst" -ofn "Z:/OneDrive/Documentos/GitHub/ZX81KBD-PLUS/ZX81KBD-PLUS/zx81kbdplus.syr" 
+ngdbuild -intstyle ise -dd _ngo -uc zx81kbdplus.ucf -p xc9572xl-PC44-10 zx81kbdplus.ngc zx81kbdplus.ngd  
+cpldfit -intstyle ise -p xc9572xl-10-PC44 -ofmt vhdl -optimize speed -htmlrpt -loc on -slew fast -init low -inputs 54 -pterms 25 -unused float -power std -terminate keeper zx81kbdplus.ngd 
+XSLTProcess zx81kbdplus_build.xml 
+tsim -intstyle ise zx81kbdplus zx81kbdplus.nga 
+hprep6 -s IEEE1149 -n zx81kbdplus -i zx81kbdplus 
+xst -intstyle ise -ifn "Z:/OneDrive/Documentos/GitHub/ZX81KBD-PLUS/ZX81KBD-PLUS/zx81kbdplus.xst" -ofn "Z:/OneDrive/Documentos/GitHub/ZX81KBD-PLUS/ZX81KBD-PLUS/zx81kbdplus.syr" 
+ngdbuild -intstyle ise -dd _ngo -uc zx81kbdplus.ucf -p xc9572xl-PC44-10 zx81kbdplus.ngc zx81kbdplus.ngd  
+cpldfit -intstyle ise -p xc9572xl-10-PC44 -ofmt vhdl -optimize speed -htmlrpt -loc on -slew fast -init low -inputs 54 -pterms 25 -unused float -power std -terminate keeper zx81kbdplus.ngd 
+XSLTProcess zx81kbdplus_build.xml 
+tsim -intstyle ise zx81kbdplus zx81kbdplus.nga 
+hprep6 -s IEEE1149 -n zx81kbdplus -i zx81kbdplus 
+pin2ucf zx81kbdplus.gyd -o Z:/OneDrive/Documentos/GitHub/ZX81KBD-PLUS/ZX81KBD-PLUS/zx81kbdplus.ucf -r zx81kbdplus.lck 
+ngdbuild -intstyle ise -dd _ngo -uc zx81kbdplus.ucf -p xc9572xl-PC44-10 zx81kbdplus.ngc zx81kbdplus.ngd  
+cpldfit -intstyle ise -p xc9572xl-10-PC44 -ofmt vhdl -optimize speed -htmlrpt -loc on -slew fast -init low -inputs 54 -pterms 25 -unused float -power std -terminate keeper zx81kbdplus.ngd 
+XSLTProcess zx81kbdplus_build.xml 
+tsim -intstyle ise zx81kbdplus zx81kbdplus.nga 
+hprep6 -s IEEE1149 -n zx81kbdplus -i zx81kbdplus 
+xst -intstyle ise -ifn "Z:/OneDrive/Documentos/GitHub/ZX81KBD-PLUS/ZX81KBD-PLUS/zx81kbdplus.xst" -ofn "Z:/OneDrive/Documentos/GitHub/ZX81KBD-PLUS/ZX81KBD-PLUS/zx81kbdplus.syr" 
+ngdbuild -intstyle ise -dd _ngo -uc zx81kbdplus.ucf -p xc9572xl-PC44-10 zx81kbdplus.ngc zx81kbdplus.ngd  
+cpldfit -intstyle ise -p xc9572xl-10-PC44 -ofmt vhdl -optimize speed -htmlrpt -loc on -slew fast -init low -inputs 54 -pterms 25 -unused float -power std -terminate keeper zx81kbdplus.ngd 
+XSLTProcess zx81kbdplus_build.xml 
+tsim -intstyle ise zx81kbdplus zx81kbdplus.nga 
+hprep6 -s IEEE1149 -n zx81kbdplus -i zx81kbdplus 
+xst -intstyle ise -ifn "Z:/OneDrive/Documentos/GitHub/ZX81KBD-PLUS/ZX81KBD-PLUS/zx81kbdplus.xst" -ofn "Z:/OneDrive/Documentos/GitHub/ZX81KBD-PLUS/ZX81KBD-PLUS/zx81kbdplus.syr" 
+ngdbuild -intstyle ise -dd _ngo -uc zx81kbdplus.ucf -p xc9572xl-PC44-10 zx81kbdplus.ngc zx81kbdplus.ngd  
+cpldfit -intstyle ise -p xc9572xl-10-PC44 -ofmt vhdl -optimize speed -htmlrpt -loc on -slew fast -init low -inputs 54 -pterms 25 -unused float -power std -terminate keeper zx81kbdplus.ngd 
+XSLTProcess zx81kbdplus_build.xml 
+tsim -intstyle ise zx81kbdplus zx81kbdplus.nga 
+hprep6 -s IEEE1149 -n zx81kbdplus -i zx81kbdplus 
+xst -intstyle ise -ifn "Z:/OneDrive/Documentos/GitHub/ZX81KBD-PLUS/ZX81KBD-PLUS/zx81kbdplus.xst" -ofn "Z:/OneDrive/Documentos/GitHub/ZX81KBD-PLUS/ZX81KBD-PLUS/zx81kbdplus.syr" 
+ngdbuild -intstyle ise -dd _ngo -uc zx81kbdplus.ucf -p xc9572xl-PC44-10 zx81kbdplus.ngc zx81kbdplus.ngd  
+cpldfit -intstyle ise -p xc9572xl-10-PC44 -ofmt vhdl -optimize speed -htmlrpt -loc on -slew fast -init low -inputs 54 -pterms 25 -unused float -power std -terminate keeper zx81kbdplus.ngd 
+XSLTProcess zx81kbdplus_build.xml 
+tsim -intstyle ise zx81kbdplus zx81kbdplus.nga 
+hprep6 -s IEEE1149 -n zx81kbdplus -i zx81kbdplus 
+xst -intstyle ise -ifn "Z:/OneDrive/Documentos/GitHub/ZX81KBD-PLUS/ZX81KBD-PLUS/zx81kbdplus.xst" -ofn "Z:/OneDrive/Documentos/GitHub/ZX81KBD-PLUS/ZX81KBD-PLUS/zx81kbdplus.syr" 
+ngdbuild -intstyle ise -dd _ngo -uc zx81kbdplus.ucf -p xc9572xl-PC44-10 zx81kbdplus.ngc zx81kbdplus.ngd  
+cpldfit -intstyle ise -p xc9572xl-10-PC44 -ofmt vhdl -optimize speed -htmlrpt -loc on -slew fast -init low -inputs 54 -pterms 25 -unused float -power std -terminate keeper zx81kbdplus.ngd 
+XSLTProcess zx81kbdplus_build.xml 
+tsim -intstyle ise zx81kbdplus zx81kbdplus.nga 
+hprep6 -s IEEE1149 -n zx81kbdplus -i zx81kbdplus 
+xst -intstyle ise -ifn "Z:/OneDrive/Documentos/GitHub/ZX81KBD-PLUS/ZX81KBD-PLUS/zx81kbdplus.xst" -ofn "Z:/OneDrive/Documentos/GitHub/ZX81KBD-PLUS/ZX81KBD-PLUS/zx81kbdplus.syr" 
+xst -intstyle ise -ifn "Z:/OneDrive/Documentos/GitHub/ZX81KBD-PLUS/ZX81KBD-PLUS/zx81kbdplus.xst" -ofn "Z:/OneDrive/Documentos/GitHub/ZX81KBD-PLUS/ZX81KBD-PLUS/zx81kbdplus.syr" 
+ngdbuild -intstyle ise -dd _ngo -uc zx81kbdplus.ucf -p xc9572xl-PC44-10 zx81kbdplus.ngc zx81kbdplus.ngd  
+cpldfit -intstyle ise -p xc9572xl-10-PC44 -ofmt vhdl -optimize speed -htmlrpt -loc on -slew fast -init low -inputs 54 -pterms 25 -unused float -power std -terminate keeper zx81kbdplus.ngd 
+XSLTProcess zx81kbdplus_build.xml 
+tsim -intstyle ise zx81kbdplus zx81kbdplus.nga 
+hprep6 -s IEEE1149 -n zx81kbdplus -i zx81kbdplus 
+xst -intstyle ise -ifn "Z:/OneDrive/Documentos/GitHub/ZX81KBD-PLUS/ZX81KBD-PLUS/zx81kbdplus.xst" -ofn "Z:/OneDrive/Documentos/GitHub/ZX81KBD-PLUS/ZX81KBD-PLUS/zx81kbdplus.syr" 
+ngdbuild -intstyle ise -dd _ngo -uc zx81kbdplus.ucf -p xc9572xl-PC44-10 zx81kbdplus.ngc zx81kbdplus.ngd  
+cpldfit -intstyle ise -p xc9572xl-10-PC44 -ofmt vhdl -optimize speed -htmlrpt -loc on -slew fast -init low -inputs 54 -pterms 25 -unused float -power std -terminate keeper zx81kbdplus.ngd 
+XSLTProcess zx81kbdplus_build.xml 
+tsim -intstyle ise zx81kbdplus zx81kbdplus.nga 
+hprep6 -s IEEE1149 -n zx81kbdplus -i zx81kbdplus 
+ngdbuild -intstyle ise -dd _ngo -uc zx81kbdplus.ucf -p xc9572xl-PC44-10 zx81kbdplus.ngc zx81kbdplus.ngd  
+cpldfit -intstyle ise -p xc9572xl-10-PC44 -ofmt vhdl -optimize speed -htmlrpt -loc on -slew fast -init low -inputs 54 -pterms 25 -unused float -power std -terminate keeper zx81kbdplus.ngd 
+XSLTProcess zx81kbdplus_build.xml 
+tsim -intstyle ise zx81kbdplus zx81kbdplus.nga 
+hprep6 -s IEEE1149 -n zx81kbdplus -i zx81kbdplus 
+ngdbuild -intstyle ise -dd _ngo -uc zx81kbdplus.ucf -p xc9572xl-PC44-10 zx81kbdplus.ngc zx81kbdplus.ngd  
+cpldfit -intstyle ise -p xc9572xl-10-PC44 -ofmt vhdl -optimize speed -htmlrpt -loc on -slew fast -init low -inputs 54 -pterms 25 -unused float -power std -terminate keeper zx81kbdplus.ngd 
+XSLTProcess zx81kbdplus_build.xml 
+tsim -intstyle ise zx81kbdplus zx81kbdplus.nga 
+hprep6 -s IEEE1149 -n zx81kbdplus -i zx81kbdplus 
+ngdbuild -intstyle ise -dd _ngo -uc zx81kbdplus.ucf -p xc9572xl-PC44-10 zx81kbdplus.ngc zx81kbdplus.ngd  
+cpldfit -intstyle ise -p xc9572xl-10-PC44 -ofmt vhdl -optimize speed -htmlrpt -loc on -slew fast -init low -inputs 54 -pterms 25 -unused float -power std -terminate keeper zx81kbdplus.ngd 
+XSLTProcess zx81kbdplus_build.xml 
+tsim -intstyle ise zx81kbdplus zx81kbdplus.nga 
+hprep6 -s IEEE1149 -n zx81kbdplus -i zx81kbdplus 
+ngdbuild -intstyle ise -dd _ngo -uc zx81kbdplus.ucf -p xc9572xl-PC44-10 zx81kbdplus.ngc zx81kbdplus.ngd  
+cpldfit -intstyle ise -p xc9572xl-10-PC44 -ofmt vhdl -optimize speed -htmlrpt -loc on -slew fast -init low -inputs 54 -pterms 25 -unused float -power std -terminate keeper zx81kbdplus.ngd 
+XSLTProcess zx81kbdplus_build.xml 
+tsim -intstyle ise zx81kbdplus zx81kbdplus.nga 
+hprep6 -s IEEE1149 -n zx81kbdplus -i zx81kbdplus 
