@@ -2,14 +2,14 @@
 #include <EEPROM.h>
 #include <U8g2lib.h>
 #include <hidboot.h>
-#include <usbhub.h>
+//#include <usbhub.h>
 #include <SPI.h>
-#include "KBDPARSER.h"
 #include "PS2Keyboard.h"
 #include "GLOBAL.h"
 #include "SCANCODES.h"
 #include "INTL.h"
 #include "KEYBOARD.h"
+#include "KBDPARSER.h"
 #include "MENUS.h"
 #include "LOGO.h"
 
@@ -26,10 +26,10 @@
 
 USB     Usb;
 //USBHub     Hub(&Usb);
+HIDBoot < USB_HID_PROTOCOL_KEYBOARD | USB_HID_PROTOCOL_MOUSE > HidComposite(&Usb);
 HIDBoot<USB_HID_PROTOCOL_KEYBOARD>    HidKeyboard(&Usb);
 
 KbdRptParser Prs;
-
   
 void setup() {
   Wire.begin();
@@ -60,6 +60,8 @@ void setup() {
   delay( 1000 );
 
   HidKeyboard.SetReportParser(0, &Prs);
+
+
   keyboard.begin(DataPin, IRQpin);
   scState = stPRESS;
   prev_value = 0;
@@ -115,6 +117,7 @@ void loop() {
   displayKeyboard(false,0,0,0);  
   // displayJoystick();
   RESET
+  Serial.println(rows(7));
   for (int i=0; i<=7;i++){
     for (int j=0; j<=4; j++){
         digitalWrite(C[j],bitRead(rows[i],j));
@@ -123,4 +126,36 @@ void loop() {
   }
   Usb.Task();
   if (button_pressed()) {waitNoKey(); configMenu();}
+  // uint8_t usbstate = Usb.getUsbTaskState();
+  // if (usbstate==USB_STATE_RUNNING) {
+  //   E_Notify(PSTR("\r\nDevice connected."), 0x80);
+  //   E_Notify(PSTR("\r\nDescriptor Length:\t"), 0x80);
+  //   print_hex(buf.bLength, 8);
+  //   E_Notify(PSTR("\r\nDescriptor type:\t"), 0x80);
+  //   print_hex(buf.bDescriptorType, 8);
+  //   E_Notify(PSTR("\r\nUSB version:\t\t"), 0x80);
+  //   print_hex(buf.bcdUSB, 16);
+  //   E_Notify(PSTR("\r\nDevice class:\t\t"), 0x80);
+  //   print_hex(buf.bDeviceClass, 8);
+  //   E_Notify(PSTR("\r\nDevice Subclass:\t"), 0x80);
+  //   print_hex(buf.bDeviceSubClass, 8);
+  //   E_Notify(PSTR("\r\nDevice Protocol:\t"), 0x80);
+  //   print_hex(buf.bDeviceProtocol, 8);
+  //   E_Notify(PSTR("\r\nMax.packet size:\t"), 0x80);
+  //   print_hex(buf.bMaxPacketSize0, 8);
+  //   E_Notify(PSTR("\r\nVendor  ID:\t\t"), 0x80);
+  //   print_hex(buf.idVendor, 16);
+  //   E_Notify(PSTR("\r\nProduct ID:\t\t"), 0x80);
+  //   print_hex(buf.idProduct, 16);
+  //   E_Notify(PSTR("\r\nRevision ID:\t\t"), 0x80);
+  //   print_hex(buf.bcdDevice, 16);
+  //   E_Notify(PSTR("\r\nMfg.string index:\t"), 0x80);
+  //   print_hex(buf.iManufacturer, 8);
+  //   E_Notify(PSTR("\r\nProd.string index:\t"), 0x80);
+  //   print_hex(buf.iProduct, 8);
+  //   E_Notify(PSTR("\r\nSerial number index:\t"), 0x80);
+  //   print_hex(buf.iSerialNumber, 8);
+  //   E_Notify(PSTR("\r\nNumber of conf.:\t"), 0x80);
+  //   print_hex(buf.bNumConfigurations, 8);
+  // }
 }

@@ -1,11 +1,11 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <report-views version="2.0" >
  <header>
-  <DateModified>2023-11-11T14:06:02</DateModified>
+  <DateModified>2023-12-02T14:19:57</DateModified>
   <ModuleName>zx81kbdplus</ModuleName>
   <SummaryTimeStamp>2023-11-09T20:47:20</SummaryTimeStamp>
-  <SavedFilePath>Z:/OneDrive/Documentos/GitHub/ZX81KBD-PLUS/ZX81KBD-PLUS/iseconfig/zx81kbdplus.xreport</SavedFilePath>
-  <ImplementationReportsDirectory>Z:/OneDrive/Documentos/GitHub/ZX81KBD-PLUS/ZX81KBD-PLUS\</ImplementationReportsDirectory>
+  <SavedFilePath>Z:/OneDrive/Documentos/GitHub/ZX81KBD-PLUS/CPLD/ZX81KBD-PLUS/iseconfig/zx81kbdplus.xreport</SavedFilePath>
+  <ImplementationReportsDirectory>Z:/OneDrive/Documentos/GitHub/ZX81KBD-PLUS/CPLD/ZX81KBD-PLUS\</ImplementationReportsDirectory>
   <DateInitialized>2023-11-09T10:48:39</DateInitialized>
   <EnableMessageFiltering>false</EnableMessageFiltering>
  </header>
