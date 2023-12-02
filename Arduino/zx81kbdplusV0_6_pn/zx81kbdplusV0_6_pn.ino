@@ -14,15 +14,19 @@
 #include "LOGO.h"
 
 #define RESET   digitalWrite(NRST, 0);  \
-                delay(1);               \
+                delayMicroseconds(50); \
+                /*delay(1);*/               \
                 digitalWrite(NRST, 1);  \
-                delay(1);               
+                delayMicroseconds(50); \
+                /*delay(1);*/               \
 
  //delayMicroseconds(50);
  #define CLOCK  digitalWrite(CLK, 0);   \
-                delay(1);               \
+                delayMicroseconds(50); \
+                /*delay(1);*/               \
                 digitalWrite(CLK, 1);   \
-                delay(1);               
+                delayMicroseconds(50); \
+                /*delay(1);*/               \
 
 USB     Usb;
 //USBHub     Hub(&Usb);
@@ -105,7 +109,7 @@ void loop() {
     if (JDOWN) pressKey(joyKeys[DOWN]); else if (PREV_JDOWN) releaseKey(joyKeys[DOWN]); 
     if (JLEFT) pressKey(joyKeys[LEFT]); else if (PREV_JLEFT) releaseKey(joyKeys[LEFT]); 
     if (JRIGHT) pressKey(joyKeys[RIGHT]); else if (PREV_JRIGHT) releaseKey(joyKeys[RIGHT]); 
-    if (JBUTB) pressKey(joyKeys[BUTB]); else releaseKey(joyKeys[BUTB]); 
+    if (JBUTB) pressKey(joyKeys[BUTB]); else if (PREV_JBUTB) releaseKey(joyKeys[BUTB]); 
     if (JTRIGER) pressKey(joyKeys[TRIG]); else if (PREV_JTRIGER) releaseKey(joyKeys[TRIG]);  
     if (JBUTA) pressKey(joyKeys[BUTA]); else if (PREV_JBUTA) releaseKey(joyKeys[BUTA]); 
     prev_value=value;
@@ -117,7 +121,7 @@ void loop() {
   displayKeyboard(false,0,0,0);  
   // displayJoystick();
   RESET
-  Serial.println(rows(7));
+  //Serial.println(rows[7]);
   for (int i=0; i<=7;i++){
     for (int j=0; j<=4; j++){
         digitalWrite(C[j],bitRead(rows[i],j));

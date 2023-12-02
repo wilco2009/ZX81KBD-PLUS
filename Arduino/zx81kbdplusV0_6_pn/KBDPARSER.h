@@ -74,6 +74,7 @@ void KbdRptParser::OnKeyDown(uint8_t mod, uint8_t sc)
 //   Serial.print(rows[i]);
 //   Serial.print(",");
 // }
+//  Serial.println(rows[7]);
   if (shift /*|| ctrlPressed*/) clearRow(0,0);
 
   // Serial.print("DN ");
