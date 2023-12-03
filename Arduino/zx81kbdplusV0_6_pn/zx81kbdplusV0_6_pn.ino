@@ -27,13 +27,14 @@
                 digitalWrite(CLK, 1);   \
                 delayMicroseconds(50); \
                 /*delay(1);*/               \
-
-USB     Usb;
-//USBHub     Hub(&Usb);
-HIDBoot < USB_HID_PROTOCOL_KEYBOARD | USB_HID_PROTOCOL_MOUSE > HidComposite(&Usb);
-HIDBoot<USB_HID_PROTOCOL_KEYBOARD>    HidKeyboard(&Usb);
-
+/* variables */
 KbdRptParser Prs;
+ 
+uint8_t rcode;
+uint8_t usbstate;
+uint8_t laststate;
+//uint8_t buf[sizeof(USB_DEVICE_DESCRIPTOR)];
+USB_DEVICE_DESCRIPTOR buf;
   
 void setup() {
   Wire.begin();
@@ -130,36 +131,49 @@ void loop() {
   }
   Usb.Task();
   if (button_pressed()) {waitNoKey(); configMenu();}
-  // uint8_t usbstate = Usb.getUsbTaskState();
-  // if (usbstate==USB_STATE_RUNNING) {
-  //   E_Notify(PSTR("\r\nDevice connected."), 0x80);
-  //   E_Notify(PSTR("\r\nDescriptor Length:\t"), 0x80);
-  //   print_hex(buf.bLength, 8);
-  //   E_Notify(PSTR("\r\nDescriptor type:\t"), 0x80);
-  //   print_hex(buf.bDescriptorType, 8);
-  //   E_Notify(PSTR("\r\nUSB version:\t\t"), 0x80);
-  //   print_hex(buf.bcdUSB, 16);
-  //   E_Notify(PSTR("\r\nDevice class:\t\t"), 0x80);
-  //   print_hex(buf.bDeviceClass, 8);
-  //   E_Notify(PSTR("\r\nDevice Subclass:\t"), 0x80);
-  //   print_hex(buf.bDeviceSubClass, 8);
-  //   E_Notify(PSTR("\r\nDevice Protocol:\t"), 0x80);
-  //   print_hex(buf.bDeviceProtocol, 8);
-  //   E_Notify(PSTR("\r\nMax.packet size:\t"), 0x80);
-  //   print_hex(buf.bMaxPacketSize0, 8);
-  //   E_Notify(PSTR("\r\nVendor  ID:\t\t"), 0x80);
-  //   print_hex(buf.idVendor, 16);
-  //   E_Notify(PSTR("\r\nProduct ID:\t\t"), 0x80);
-  //   print_hex(buf.idProduct, 16);
-  //   E_Notify(PSTR("\r\nRevision ID:\t\t"), 0x80);
-  //   print_hex(buf.bcdDevice, 16);
-  //   E_Notify(PSTR("\r\nMfg.string index:\t"), 0x80);
-  //   print_hex(buf.iManufacturer, 8);
-  //   E_Notify(PSTR("\r\nProd.string index:\t"), 0x80);
-  //   print_hex(buf.iProduct, 8);
-  //   E_Notify(PSTR("\r\nSerial number index:\t"), 0x80);
-  //   print_hex(buf.iSerialNumber, 8);
-  //   E_Notify(PSTR("\r\nNumber of conf.:\t"), 0x80);
-  //   print_hex(buf.bNumConfigurations, 8);
-  // }
+  usbstate = Usb.getUsbTaskState();
+  if(usbstate != laststate) {
+    laststate = usbstate;
+    switch (usbstate){
+      case USB_STATE_RUNNING:
+            E_Notify(PSTR("\r\nGetting device descriptor"), 0x80);
+            rcode = Usb.getDevDescr(1, 0, sizeof (USB_DEVICE_DESCRIPTOR), (uint8_t*) & buf);
+
+            if(rcode) {
+                    E_Notify(PSTR("\r\nError reading device descriptor. Error code "), 0x80);
+                    print_hex(rcode, 8);
+            } else {
+              USB_connected = true;
+                /**/
+                E_Notify(PSTR("\r\nDescriptor Length:\t"), 0x80);
+                print_hex(buf.bLength, 8);
+                E_Notify(PSTR("\r\nDescriptor type:\t"), 0x80);
+                print_hex(buf.bDescriptorType, 8);
+                E_Notify(PSTR("\r\nUSB version:\t\t"), 0x80);
+                print_hex(buf.bcdUSB, 16);
+                E_Notify(PSTR("\r\nDevice class:\t\t"), 0x80);
+                print_hex(buf.bDeviceClass, 8);
+                E_Notify(PSTR("\r\nDevice Subclass:\t"), 0x80);
+                print_hex(buf.bDeviceSubClass, 8);
+                E_Notify(PSTR("\r\nDevice Protocol:\t"), 0x80);
+                print_hex(buf.bDeviceProtocol, 8);
+                E_Notify(PSTR("\r\nMax.packet size:\t"), 0x80);
+                print_hex(buf.bMaxPacketSize0, 8);
+                E_Notify(PSTR("\r\nVendor  ID:\t\t"), 0x80);
+                print_hex(buf.idVendor, 16);
+                E_Notify(PSTR("\r\nProduct ID:\t\t"), 0x80);
+                print_hex(buf.idProduct, 16);
+                E_Notify(PSTR("\r\nRevision ID:\t\t"), 0x80);
+                print_hex(buf.bcdDevice, 16);
+                E_Notify(PSTR("\r\nMfg.string index:\t"), 0x80);
+                print_hex(buf.iManufacturer, 8);
+                E_Notify(PSTR("\r\nProd.string index:\t"), 0x80);
+                print_hex(buf.iProduct, 8);
+                E_Notify(PSTR("\r\nSerial number index:\t"), 0x80);
+                print_hex(buf.iSerialNumber, 8);
+                E_Notify(PSTR("\r\nNumber of conf.:\t"), 0x80);
+                print_hex(buf.bNumConfigurations, 8);
+            }
+    }
+  }
 }

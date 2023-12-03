@@ -20,6 +20,7 @@ uint8_t get_menu_key(){
     else if (JBUTA) return MENU_ESC;
   };
   readPS2Keyboard();
+  Usb.Task();
   if (key_pressed){
           Serial.println(row_pressed);
           Serial.println(col_pressed);

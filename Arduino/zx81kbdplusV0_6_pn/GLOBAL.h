@@ -39,6 +39,8 @@ const int IRQpin =  3;
 
 uint8_t config_ver;
 uint8_t currentKeyboard = 0;
+boolean USB_connected = false;
+
 
 uint8_t joyKeys[] = {
   10,   // UP = Q
@@ -105,3 +107,21 @@ char getCharKey(uint8_t key){
   return keys[row][column];
 }
 
+/* prints hex numbers with leading zeroes */
+void print_hex(int v, int num_places) {
+        int mask = 0, n, num_nibbles, digit;
+
+        for(n = 1; n <= num_places; n++) {
+                mask = (mask << 1) | 0x0001;
+        }
+        v = v & mask; // truncate v to specified number of places
+
+        num_nibbles = num_places / 4;
+        if((num_places % 4) != 0) {
+                ++num_nibbles;
+        }
+        do {
+                digit = ((v >> (num_nibbles - 1) * 4)) & 0x0f;
+                Serial.print(digit, HEX);
+        } while(--num_nibbles);
+}

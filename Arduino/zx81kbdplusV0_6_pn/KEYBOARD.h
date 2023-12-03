@@ -97,6 +97,11 @@ void displayKeyboard(boolean select, uint8_t joykey, uint8_t rowSelected, uint8_
       if (JBUTA) u8g2.drawBox(111,0,ch_w,ch_h);
       u8g2.drawGlyph(121, 7, getCharKey(joyKeys[BUTB]));// SJOY[6]);
       if (JBUTB) u8g2.drawBox(119,0,ch_w,ch_h);
+      if (USB_connected)
+        strcpy_P(buffer, PSTR("USB"));
+      else
+        strcpy_P(buffer, PSTR("---"));
+      u8g2.drawStr(104,22,buffer);
       strcpy_P(buffer, (char *)pgm_read_ptr(&(ps2IntlNames[currentKeyboard])));
       u8g2.drawStr(104,30,buffer);
     } 
