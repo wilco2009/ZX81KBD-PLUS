@@ -33,4 +33,20 @@ In the photo you can see the chip that needs to be replaced.
 
  ![ZX81KBD-PLUS|800](Images/chip.jpg)
 
+## INTERFACE CONFIGURATION
+
+Pressing the
+
+![ZX81KBD-PLUS|800](Images/chip.jpg)
+
+To enter the configuration menu we can do it in two ways:
+- Pressing the configuration button
+- Pressing F10 on the keyboard
+
+Once inside the menu we can move through the options using the joystick or the keyboard cursor arrows. 
+To select an option we will press the fire button on the joystick or the enter key on the keyboard.
+
+### REDEFINING JOYSTICK KEYS
+
+
 
