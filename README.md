@@ -24,7 +24,7 @@
  | pin header female 1x40	| 2
  | 74AHC125D SOP14	| 1
 
-##REPLACING THE USB HOST SHIELD CHIP
+## REPLACING THE USB HOST SHIELD CHIP
 Unless we buy an original USB Host Shield from the official Arduino store, it is very likely that we will end up with a defective board from Aliexpress. The Chinese manufacturers have not strictly followed the original scheme and have used a 74HC125D instead of a 74AHC125D indicated in the original scheme.
 
 The good news is that by replacing this chip it is very likely that we will have a fully functional board, the bad news is that we will have to desolder the old chip and solder the new one.
