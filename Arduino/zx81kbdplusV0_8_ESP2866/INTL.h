@@ -1,7 +1,14 @@
 #define NUM_KEYBOARDS     5
+#if defined (__AVR__)
 
 typedef const uint8_t PROGMEM ps2intlCodes_array[NUM_INTL];
 typedef const uint8_t PROGMEM ps2intlShiftedCodes_array[NUM_INTL_SHIFTED];
+#else
+typedef const uint8_t ps2intlCodes_array[NUM_INTL];
+typedef const uint8_t ps2intlShiftedCodes_array[NUM_INTL_SHIFTED];
+#endif
+
+#ifdef PS2
 
 const uint8_t PROGMEM ps2intlCodes[NUM_INTL]=
 {
@@ -18,7 +25,8 @@ const uint8_t PROGMEM ps2intlCodes[NUM_INTL]=
   0x49, // ROW 4 KEY 11 .
   0x4a  // ROW 4 KEY 12 /
 };
-
+#endif
+#ifdef USB
 const uint8_t PROGMEM USBintlCodes[NUM_INTL]=
 {
   0x35, // ROW 1 KEY 01 `
@@ -34,7 +42,7 @@ const uint8_t PROGMEM USBintlCodes[NUM_INTL]=
   0x37, // ROW 4 KEY 11 .
   0x38  // ROW 4 KEY 12 /
 };
-
+#endif
 const uint8_t PROGMEM zxUSCodes[NUM_INTL]= {
   SHIFT + 25, // ROW 1 KEY 01 ` ---- "
   SHIFT + 33, // ROW 1 KEY 12 - ---- -
@@ -234,7 +242,6 @@ const uint8_t PROGMEM zxITShiftedCodes[NUM_INTL_SHIFTED]= {
   SHIFT +  1, // ROW 4 KEY 11 . :
   SHIFT + 33  // ROW 4 KEY 12 - _
 };
-
 ps2intlCodes_array *zxCodesList[NUM_KEYBOARDS] {
   &zxUSCodes,
   &zxUSCodes,
@@ -242,7 +249,6 @@ ps2intlCodes_array *zxCodesList[NUM_KEYBOARDS] {
   &zxDECodes,
   &zxITCodes
 };
-
 ps2intlCodes_array *zxintlCodes = &zxUSCodes; 
 ps2intlShiftedCodes_array *zxShiftedCodes = &zxUSShiftedCodes;
 
@@ -253,6 +259,7 @@ ps2intlShiftedCodes_array *zxShiftedCodesList[NUM_KEYBOARDS] {
   &zxDEShiftedCodes,
   &zxITShiftedCodes
 };
+
 
 const char intlNames_0[] PROGMEM = "US";
 const char intlNames_1[] PROGMEM = "UK";
@@ -292,6 +299,7 @@ uint8_t findShiftedCode(uint8_t sc){
 }
 #endif
 
+#ifdef USB
 uint8_t findUSBShiftedCode(uint8_t sc){
   uint8_t v;
   int i = 0;
@@ -310,7 +318,9 @@ uint8_t findUSBShiftedCode(uint8_t sc){
   } while (i<NUM_INTL_SHIFTED);
   return NULL  + 40;
 }
+#endif
 
+#ifdef PS2
 uint8_t findIntlCode(uint8_t sc){
   uint8_t v;
   int i = 0;
@@ -326,7 +336,8 @@ uint8_t findIntlCode(uint8_t sc){
   } while (i<NUM_INTL);
   return NULL  + 40;
 }
-
+#endif
+#ifdef USB
 uint8_t findUSBIntlCode(uint8_t sc){
   uint8_t v;
   int i = 0;
@@ -342,3 +353,4 @@ uint8_t findUSBIntlCode(uint8_t sc){
   } while (i<NUM_INTL);
   return NULL  + 40;
 }
+#endif

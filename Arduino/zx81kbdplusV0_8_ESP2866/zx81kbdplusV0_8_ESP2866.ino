@@ -1,10 +1,11 @@
+
 #if defined(ARDUINO_UNOR4_MINIMA) || defined(ARDUINO_UNOR4_WIFI)
   #define UNOR4
 #endif
-#define USBKEYBOARD
+//#define USBKEYBOARD
 #define PS2
 //#define USBJOYSTICK
-#define DETECTUSB
+//#define DETECTUSB
 
 #include <Wire.h>
 #include <EEPROM.h>
@@ -19,7 +20,7 @@
 #endif
 #include <SPI.h>
 #ifdef PS2
-  #include <PS2Keyboard.h>
+  #include "PS2Keyboard.h"
 #endif
 
 #include "GLOBAL.h"
@@ -70,6 +71,9 @@
 void setup() {
   Wire.begin();
   u8g2.begin();
+  #if defined (__XTENSA__)
+  EEPROM.begin(EEPROM_SIZE);
+  #endif
   Serial.begin(9600);
   Serial.println(F("START"));
   pinMode(CLK,OUTPUT);
@@ -79,8 +83,8 @@ void setup() {
   pinMode(C2,OUTPUT);
   pinMode(C3,OUTPUT);
   pinMode(C4,OUTPUT);
-  //u8g2.setFont(u8g2_font_ncenB14_tr);
-  //u8g2.setFont(u8g2_font_smallsimple_tr);
+  u8g2.setFont(u8g2_font_ncenB14_tr);
+  u8g2.setFont(u8g2_font_smallsimple_tr);
   u8g2.setFont(u8g2_font_spleen5x8_mu);
  u8g2.firstPage();
   do {
@@ -94,9 +98,11 @@ void setup() {
     Serial.println(F("OSC did not start."));
   else
     Serial.println(F("OSC started."));
+#endif
 
   delay( 1000 );
 
+#ifdef USBKEYBOARD
   HidKeyboard.SetReportParser(0, &Prs);
 #endif
 
@@ -126,8 +132,6 @@ boolean button_pressed(){
   return CONFIG || F10Pressed;
 }
 
-uint16_t checkCounter = 0;
-
 // the loop function runs over and over again forever
 void loop() {
 #ifdef PS2
@@ -138,13 +142,6 @@ void loop() {
   if (Wire.available())
   {
     value = Wire.read();
-    // if (JUP) clearRow(2,0); else if (PREV_JUP) setRow(2,0); 
-    // if (JDOWN) clearRow(1,0); else if (PREV_JDOWN) setRow(1,0); 
-    // if (JLEFT) clearRow(5,1); else if (PREV_JLEFT) setRow(5,1); 
-    // if (JRIGHT) clearRow(5,0); else if (PREV_JRIGHT) setRow(5,0); 
-    // //if (JBUTB) clearRow(4,0); // else setRow(5,0); 
-    // if (JTRIGER) clearRow(4,0); else if (PREV_JTRIGER)setRow(4,0); 
-    // if (JBUTA) clearRow(6,0); else if (PREV_JBUTA) setRow(6,0); 
     if (JUP) pressKey(joyKeys[UP]); else if (PREV_JUP) releaseKey(joyKeys[UP]); 
     if (JDOWN) pressKey(joyKeys[DOWN]); else if (PREV_JDOWN) releaseKey(joyKeys[DOWN]); 
     if (JLEFT) pressKey(joyKeys[LEFT]); else if (PREV_JLEFT) releaseKey(joyKeys[LEFT]); 
@@ -176,11 +173,7 @@ void loop() {
   if (button_pressed()) {waitNoKey(); configMenu();}
   #ifdef USBKEYBOARD
   #ifdef DETECTUSB
-  checkCounter++;
-  if (checkCounter == 20){
-    usbstate = Usb.getUsbTaskState();
-    //checkCounter = 0;
-  }
+  usbstate = Usb.getUsbTaskState();
   if(usbstate != laststate) {
     laststate = usbstate;
     switch (usbstate){

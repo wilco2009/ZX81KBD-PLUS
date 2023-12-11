@@ -1,9 +1,9 @@
 #define CONFIG_VER 1
 
-const int DataPin = A2;
-const int IRQpin =  3;
-
-#ifdef UNOR4
+#if defined (__AVR__)
+  #warning compiling for AVR
+  const int DataPin = A2;
+  const int IRQpin =  3;
   #define CLK   A3 
   #define NRST  A6
   #define C0    A1
@@ -11,14 +11,31 @@ const int IRQpin =  3;
   #define C2    4
   #define C3    5
   #define C4    6
-#else 
-  #define CLK   A3 
-  #define NRST  A6
-  #define C0    A1
-  #define C1    2
-  #define C2    4
-  #define C3    5
-  #define C4    6
+// #elif defined (UNOR4)
+//   #warning compiling for UNOR4
+//   const int DataPin = A2;
+//   const int IRQpin =  3;
+//   #define CLK   A3 
+//   #define NRST  A6
+//   #define C0    A1
+//   #define C1    2
+//   #define C2    4
+//   #define C3    5
+//   #define C4    6
+#elif defined (__XTENSA__) //ESP8266
+  #warning compiling for ESP8266
+  #define EEPROM_SIZE 100
+  const int DataPin = D5;
+  const int IRQpin =  D6;
+  #define CLK   D0 
+  #define NRST  D0
+  #define C0    D0
+  #define C1    D0
+  #define C2    D0
+  #define C3    D0
+  #define C4    D0
+#else
+#error Compiling for unsupported target.
 #endif
 
 #define UP    0
@@ -65,11 +82,30 @@ char buffer[10];
 
 
 void saveConfig(){
-  EEPROM.update(0,CONFIG_VER);
-  EEPROM.update(1,currentKeyboard);
-  for (int i=0; i<7; i++){
-    EEPROM.update(i+2,joyKeys[i]);
-  }
+  #if defined (__XTENSA__)
+    uint8_t ver;
+    boolean modified = false;
+    EEPROM.get(0, ver);
+    if (ver!=CONFIG_VER) {
+      EEPROM.write(0,CONFIG_VER);
+      modified = true;
+    }
+    for (int i=0; i<7; i++){
+      uint8_t key;
+      EEPROM.get(i+2, key);
+      if (key!=joyKeys[i]){
+        EEPROM.write(i+2,joyKeys[i]);
+        modified = true;
+      }
+    }
+    if (modified) EEPROM.commit();
+  #else
+    EEPROM.update(0,CONFIG_VER);
+    EEPROM.update(1,currentKeyboard);
+    for (int i=0; i<7; i++){
+      EEPROM.update(i+2,joyKeys[i]);
+    }
+  #endif
 }
 
 
@@ -87,7 +123,8 @@ uint8_t rows[8]={0xff,0xff,0xff,0xff,0xff,0xff,0xff,0xff};
 
 uint8_t value = 255;
 uint8_t prev_value = 255;
-U8G2_SSD1306_128X32_UNIVISION_1_HW_I2C u8g2(U8G2_R2); //, /* clock=*/ 21, /* data=*/ 20, /* reset=*/ U8X8_PIN_NONE);   // Adafruit Feather M0 Basic Proto + FeatherWing OLED
+//U8G2_SSD1306_128X32_UNIVISION_1_HW_I2C u8g2(U8G2_R2); //, /* clock=*/ 21, /* data=*/ 20, /* reset=*/ U8X8_PIN_NONE);   // Adafruit Feather M0 Basic Proto + FeatherWing OLED
+U8G2_SSD1306_128X32_UNIVISION_F_HW_I2C u8g2(U8G2_R2, /* reset=*/ U8X8_PIN_NONE, /* clock=*/ SCL, /* data=*/ SDA);   // pin remapping with ESP8266 HW I2C
 const int pcfAddress = 0x20;
 short channel = 1;
 
