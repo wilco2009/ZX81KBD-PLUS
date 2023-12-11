@@ -29,6 +29,8 @@ Unless we buy an original USB Host Shield from the official Arduino store, it is
 
 The good news is that by replacing this chip it is very likely that we will have a fully functional board, the bad news is that we will have to desolder the old chip and solder the new one.
 In the photo you can see the chip that needs to be replaced.
+
+
  ![ZX81KBD-PLUS|800](Images/chip.jpg)
 
 
