@@ -32,6 +32,15 @@ In the photo you can see the chip that needs to be replaced.
 
 
  ![ZX81KBD-PLUS|800](Images/chip.jpg)
+ 
+## MAIN SCREEN
+
+The main screen of the OLED display is divided into two sections.
+On the left we have a representation of the zx81 keyboard, and on the right a representation of the joystick with its three buttons (A B and FIRE)
+When you press any key on the keyboard or any button on the joystick we will see the pressure on the display.
+Additionally, in the joystick section we can see which keys are configured for each of the joystick buttons.
+
+![ZX81KBD-PLUS|800](Images/display0.jpg)
 
 ## INTERFACE CONFIGURATION
 
@@ -44,7 +53,32 @@ To enter the configuration menu we can do it in two ways:
 Once inside the menu we can move through the options using the joystick or the keyboard cursor arrows. 
 To select an option we will press the fire button on the joystick or the enter key on the keyboard.
 
+### SELECTION OF KEYBOARD LAYOUT
+
+The first option that appears when we access the menu is the one that will allow us to choose the keyboard layout.
+
+![ZX81KBD-PLUS|800](Images/display4.jpg)
+
+The system is prepared for the following distributions:
+- "US" - USA
+- "UK" - United Kingdom
+- "ES" - Spain
+- "DE" - Germany
+
+![ZX81KBD-PLUS|800](Images/display3.jpg)
+
+The active keyboard will be marked with an asterisk.
+We can change the active keyboard with the up/down arrows on the keyboard or joystick and select with enter or the fire button.
+The ESC key will return to the main menu.
+
 ### REDEFINING JOYSTICK KEYS
 
+![ZX81KBD-PLUS|800](Images/display2.jpg)
 
+To redefine the joystick keys we will select the second option from the main menu by moving down with the arrow and press enter/fire.
+After this, a screen identical to the main screen will appear but with the first joystick button to be redefined (UP) flashing.
+We will select the key we want with the arrows in the left section of the screen and press ENTER or fire.
+We can also directly press the key that we want to assign, except in the case of the cursor and enter keys, which would have to be selected by the first method mentioned.
+By pressing the ESC or A key on the joystick we will go to the next button without modifying the current one.
 
+![ZX81KBD-PLUS|800](Images/display1.jpg)
