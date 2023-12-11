@@ -1,7 +1,7 @@
 # ZX81KBD-PLUS
  Joystick, PS2 & USB keyboard interface for the ZX81
  
- ![ZX81KBD-PLUS|800](images/interface.jpg)
+ ![ZX81KBD-PLUS|800](Images/interface.jpg)
  
  COMPONENT LIST
  |  Component |  Quantity |
@@ -29,3 +29,6 @@ Unless we buy an original USB Host Shield from the official Arduino store, it is
 
 The good news is that by replacing this chip it is very likely that we will have a fully functional board, the bad news is that we will have to desolder the old chip and solder the new one.
 In the photo you can see the chip that needs to be replaced.
+ ![ZX81KBD-PLUS|800](Images/chip.jpg)
+
+
