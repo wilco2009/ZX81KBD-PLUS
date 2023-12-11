@@ -28,6 +28,7 @@
  | pin header male 1x40 (long pins)	| 1
  | pin header female 1x40	| 2
  | 74AHC125D SOP14	| 1
+ | EDGE CONNECTOR | 1
  
 Once the interface is assembled, the first thing we have to do is program the arduino (using the arduino IDE) or the avrdude.
 We must also program the CPLD using the Xilinx IMPACT program and connecting a programming cable to the JTAG connector.
