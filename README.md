@@ -3,9 +3,9 @@
  
  ![ZX81KBD-PLUS|800](Images/interface.jpg)
  
- ##INTERFACE COMPONENTS
+ ## INTERFACE COMPONENTS
  
- ![ZX81KBD-PLUS|800](Images/partes.jpg)
+ ![ZX81KBD-PLUS|800](Images/PARTES.jpg)
 
  
  COMPONENT LIST
