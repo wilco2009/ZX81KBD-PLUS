@@ -35,9 +35,7 @@ In the photo you can see the chip that needs to be replaced.
 
 ## INTERFACE CONFIGURATION
 
-Pressing the
-
-![ZX81KBD-PLUS|800](Images/chip.jpg)
+![ZX81KBD-PLUS|800](Images/button.jpg)
 
 To enter the configuration menu we can do it in two ways:
 - Pressing the configuration button
