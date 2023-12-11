@@ -28,6 +28,9 @@
  | pin header male 1x40 (long pins)	| 1
  | pin header female 1x40	| 2
  | 74AHC125D SOP14	| 1
+ 
+Once the interface is assembled, the first thing we have to do is program the arduino (using the arduino IDE) or the avrdude.
+We must also program the CPLD using the Xilinx IMPACT program and connecting a programming cable to the JTAG connector.
 
 ## REPLACING THE USB HOST SHIELD CHIP
 Unless we buy an original USB Host Shield from the official Arduino store, it is very likely that we will end up with a defective board from Aliexpress. The Chinese manufacturers have not strictly followed the original scheme and have used a 74HC125D instead of a 74AHC125D indicated in the original scheme.
@@ -38,6 +41,7 @@ In the photo you can see the chip that needs to be replaced.
 
  ![ZX81KBD-PLUS|800](Images/chip.jpg)
  
+
 ## MAIN SCREEN
 
 The main screen of the OLED display is divided into two sections.
@@ -87,3 +91,4 @@ We can also directly press the key that we want to assign, except in the case of
 By pressing the ESC or A key on the joystick we will go to the next button without modifying the current one.
 
 ![ZX81KBD-PLUS|800](Images/display1.jpg)
+
