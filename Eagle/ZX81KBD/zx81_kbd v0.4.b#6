@@ -216,7 +216,6 @@
 <text x="50.8" y="36.83" size="1.778" layer="25">TMS</text>
 <text x="-18.796" y="73.152" size="1.778" layer="25" rot="R180">5V</text>
 <text x="-6.858" y="73.025" size="1.778" layer="25" rot="R180">GND</text>
-<dimension x1="15.24" y1="66.04" x2="15.24" y2="66.04" x3="15.24" y3="66.04" textsize="1.778" layer="1"/>
 </plain>
 <libraries>
 <library name="wirepad">
@@ -3093,10 +3092,10 @@ design rules under a new name.</description>
 <contactref element="JP3" pad="2"/>
 <contactref element="IC1" pad="1"/>
 <polygon width="0.2" layer="16" isolate="0.2">
-<vertex x="-72.39" y="82.55"/>
-<vertex x="-59.69" y="82.55"/>
-<vertex x="-59.69" y="0"/>
-<vertex x="-72.39" y="0"/>
+<vertex x="-34.29" y="82.55"/>
+<vertex x="64.77" y="82.55"/>
+<vertex x="64.77" y="0"/>
+<vertex x="-34.29" y="0"/>
 </polygon>
 <contactref element="ARDUINO_NANO1" pad="19"/>
 <contactref element="ARDUINO_NANO1" pad="14"/>
@@ -3246,10 +3245,10 @@ design rules under a new name.</description>
 <wire x1="-12" y1="75" x2="-11.9888" y2="75.2094" width="0.4" layer="16"/>
 <wire x1="-13.75" y1="72.5" x2="-13.97" y2="72.39" width="0.4" layer="16"/>
 <polygon width="0.1524" layer="1" isolate="0.254">
-<vertex x="-80.01" y="82.55"/>
-<vertex x="-49.53" y="82.55"/>
-<vertex x="-49.53" y="0"/>
-<vertex x="-80.01" y="0"/>
+<vertex x="-34.29" y="82.55"/>
+<vertex x="64.77" y="82.55"/>
+<vertex x="64.77" y="0"/>
+<vertex x="-34.29" y="0"/>
 </polygon>
 <contactref element="JP2" pad="6"/>
 <wire x1="19.5" y1="42.0961375" x2="17.399" y2="40.64" width="0.4" layer="16"/>

@@ -69,7 +69,7 @@
 #endif
 
 void setup() {
-  Wire.begin();
+// Wire.begin();
   u8g2.begin();
   #if defined (__XTENSA__)
   EEPROM.begin(EEPROM_SIZE);
@@ -156,7 +156,7 @@ void loop() {
   // Mostrar el valor por puerto serie
   //Serial.println(rows[5]);
   displayKeyboard(false,0,0,0);  
-  // displayJoystick();
+  //displayJoystick();
   RESET
   //Serial.println(rows[7]);
   for (int i=0; i<=7;i++){

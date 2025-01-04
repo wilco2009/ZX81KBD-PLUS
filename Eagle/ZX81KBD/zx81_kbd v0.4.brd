@@ -195,11 +195,11 @@
 </layers>
 <board>
 <plain>
-<wire x1="66.167" y1="0" x2="66.167" y2="82.55" width="0" layer="20"/>
-<wire x1="-34.29" y1="0" x2="-34.29" y2="82.55" width="0" layer="20"/>
-<wire x1="-34.29" y1="82.55" x2="6.731" y2="82.55" width="0" layer="20"/>
-<wire x1="8.636" y1="82.55" x2="66.167" y2="82.55" width="0" layer="20"/>
-<wire x1="66.167" y1="0" x2="-34.29" y2="0" width="0" layer="20"/>
+<wire x1="65.8" y1="0" x2="65.8" y2="82.55" width="0" layer="20"/>
+<wire x1="-34.19" y1="0" x2="-34.19" y2="82.55" width="0" layer="20"/>
+<wire x1="-34.19" y1="82.55" x2="6.731" y2="82.55" width="0" layer="20"/>
+<wire x1="8.636" y1="82.55" x2="65.8" y2="82.55" width="0" layer="20"/>
+<wire x1="65.8" y1="0" x2="-34.19" y2="0" width="0" layer="20"/>
 <wire x1="6.731" y1="82.55" x2="6.731" y2="74.93" width="0" layer="20"/>
 <wire x1="6.731" y1="74.93" x2="8.636" y2="74.93" width="0" layer="20"/>
 <wire x1="8.636" y1="74.93" x2="8.636" y2="82.55" width="0" layer="20"/>
@@ -5663,7 +5663,6 @@ design rules under a new name.</description>
 <approved hash="4,1,48fd44c5fc25fc77"/>
 <approved hash="4,16,e99ee5f55ac41dbb"/>
 <approved hash="4,16,48fd44c5fc25fc77"/>
-<approved hash="4,1,1fbdc876365be6d2"/>
 <approved hash="4,1,c6926b4a3410f1c2"/>
 <approved hash="4,1,5287645d2f1fcac3"/>
 <approved hash="4,1,7ead57762043ddc1"/>
@@ -5691,7 +5690,6 @@ design rules under a new name.</description>
 <approved hash="4,1,fba1d1427370344f"/>
 <approved hash="4,1,1873b21b5caae957"/>
 <approved hash="4,1,929e8810f619045e"/>
-<approved hash="4,16,1fbdc876365be6d2"/>
 <approved hash="4,16,c6926b4a3410f1c2"/>
 <approved hash="4,16,5287645d2f1fcac3"/>
 <approved hash="4,16,522151fadabffbc1"/>
@@ -5727,34 +5725,8 @@ design rules under a new name.</description>
 <approved hash="4,16,64dd2644e35c5c07"/>
 <approved hash="4,16,b9ba5c3dd304c759"/>
 <approved hash="4,16,b56bba07d73022da"/>
-<approved hash="4,14,64f4fcdf3e9a5c37"/>
-<approved hash="4,2,64f4fcdf3e9a5c37"/>
-<approved hash="4,3,64f4fcdf3e9a5c37"/>
-<approved hash="4,4,64f4fcdf3e9a5c37"/>
-<approved hash="4,5,64f4fcdf3e9a5c37"/>
-<approved hash="4,6,64f4fcdf3e9a5c37"/>
-<approved hash="4,7,64f4fcdf3e9a5c37"/>
-<approved hash="4,8,64f4fcdf3e9a5c37"/>
-<approved hash="4,9,64f4fcdf3e9a5c37"/>
-<approved hash="4,10,64f4fcdf3e9a5c37"/>
-<approved hash="4,11,64f4fcdf3e9a5c37"/>
-<approved hash="4,12,64f4fcdf3e9a5c37"/>
-<approved hash="4,13,64f4fcdf3e9a5c37"/>
-<approved hash="4,15,64f4fcdf3e9a5c37"/>
-<approved hash="4,2,b536609c0a8222ea"/>
-<approved hash="4,3,b536609c0a8222ea"/>
-<approved hash="4,4,b536609c0a8222ea"/>
-<approved hash="4,5,b536609c0a8222ea"/>
-<approved hash="4,6,b536609c0a8222ea"/>
-<approved hash="4,7,b536609c0a8222ea"/>
-<approved hash="4,8,b536609c0a8222ea"/>
-<approved hash="4,9,b536609c0a8222ea"/>
-<approved hash="4,10,b536609c0a8222ea"/>
-<approved hash="4,11,b536609c0a8222ea"/>
-<approved hash="4,12,b536609c0a8222ea"/>
-<approved hash="4,13,b536609c0a8222ea"/>
-<approved hash="4,14,b536609c0a8222ea"/>
-<approved hash="4,15,b536609c0a8222ea"/>
+<approved hash="4,1,e45cf346f4e1e431"/>
+<approved hash="4,16,e45cf346f4e1e431"/>
 </errors>
 </board>
 </drawing>

@@ -1,3 +1,4 @@
+#define INPUT_PULLUP
 /*
   PS2Keyboard.h - PS2Keyboard library
   Copyright (c) 2007 Free Software Foundation.  All right reserved.
@@ -33,7 +34,6 @@
 #endif
 
 #include "utility/int_pins.h"
-
 // Every call to read() returns a single byte for each
 // keystroke.  These configure what byte will be returned
 // for each "special" key.  To ignore a key, use zero.

@@ -195,11 +195,11 @@
 </layers>
 <board>
 <plain>
-<wire x1="66.167" y1="0" x2="66.167" y2="82.55" width="0" layer="20"/>
-<wire x1="-34.29" y1="0" x2="-34.29" y2="82.55" width="0" layer="20"/>
-<wire x1="-34.29" y1="82.55" x2="6.731" y2="82.55" width="0" layer="20"/>
-<wire x1="8.636" y1="82.55" x2="66.167" y2="82.55" width="0" layer="20"/>
-<wire x1="66.167" y1="0" x2="-34.29" y2="0" width="0" layer="20"/>
+<wire x1="66" y1="0" x2="66" y2="82.55" width="0" layer="20"/>
+<wire x1="-34.19" y1="0" x2="-34.19" y2="82.55" width="0" layer="20"/>
+<wire x1="-34.19" y1="82.55" x2="6.731" y2="82.55" width="0" layer="20"/>
+<wire x1="8.636" y1="82.55" x2="66" y2="82.55" width="0" layer="20"/>
+<wire x1="66" y1="0" x2="-34.19" y2="0" width="0" layer="20"/>
 <wire x1="6.731" y1="82.55" x2="6.731" y2="74.93" width="0" layer="20"/>
 <wire x1="6.731" y1="74.93" x2="8.636" y2="74.93" width="0" layer="20"/>
 <wire x1="8.636" y1="74.93" x2="8.636" y2="82.55" width="0" layer="20"/>
@@ -3924,7 +3924,7 @@ design rules under a new name.</description>
 <wire x1="55.119" y1="28.195" x2="55.119" y2="12.361" width="0.254" layer="16"/>
 <wire x1="55.3396" y1="38.6404" x2="55.3396" y2="29.3403875" width="0.254" layer="16"/>
 <wire x1="55.4076" y1="28.4836" x2="55.119" y2="28.195" width="0.254" layer="16"/>
-<wire x1="55.75" y1="5.25" x2="55.88" y2="5.08" width="0" layer="19" extent="1-1"/>
+<wire x1="55.75" y1="5.25" x2="55.88" y2="5.08" width="0.254" layer="1"/>
 </signal>
 <signal name="/WAIT">
 <contactref element="19A" pad="1"/>
@@ -5516,12 +5516,10 @@ design rules under a new name.</description>
 <via x="-14.5" y="61.75" extent="1-16" drill="0.35"/>
 <via x="2.25" y="55.25" extent="1-16" drill="0.35"/>
 <via x="3.25" y="50" extent="1-16" drill="0.35"/>
-<wire x1="17.78" y1="44.6786" x2="16.9676375" y2="44.6786" width="0.254" layer="1"/>
-<wire x1="20.32" y1="47" x2="21.75" y2="47" width="0.254" layer="1"/>
+<wire x1="17.8303625" y1="44.6786" x2="16.9676375" y2="44.6786" width="0.254" layer="1"/>
+<wire x1="20.1517625" y1="47" x2="21.75" y2="47" width="0.254" layer="1"/>
 <wire x1="16.9676375" y1="44.6786" x2="15.9262375" y2="45.72" width="0.254" layer="1"/>
 <wire x1="15.9262375" y1="45.72" x2="14.859" y2="45.72" width="0.254" layer="1"/>
-<wire x1="17.78" y1="44.6786" x2="17.8303625" y2="44.6786" width="0.254" layer="1"/>
-<wire x1="20.1517625" y1="47" x2="20.32" y2="47" width="0.254" layer="1"/>
 <wire x1="17.8303625" y1="44.6786" x2="20.1517625" y2="47" width="0.254" layer="1"/>
 </signal>
 <signal name="MOSI">
@@ -5743,6 +5741,20 @@ design rules under a new name.</description>
 <approved hash="4,12,64f4fcdf3e9a5c37"/>
 <approved hash="4,13,64f4fcdf3e9a5c37"/>
 <approved hash="4,15,64f4fcdf3e9a5c37"/>
+<approved hash="4,2,b536609c0a8222ea"/>
+<approved hash="4,3,b536609c0a8222ea"/>
+<approved hash="4,4,b536609c0a8222ea"/>
+<approved hash="4,5,b536609c0a8222ea"/>
+<approved hash="4,6,b536609c0a8222ea"/>
+<approved hash="4,7,b536609c0a8222ea"/>
+<approved hash="4,8,b536609c0a8222ea"/>
+<approved hash="4,9,b536609c0a8222ea"/>
+<approved hash="4,10,b536609c0a8222ea"/>
+<approved hash="4,11,b536609c0a8222ea"/>
+<approved hash="4,12,b536609c0a8222ea"/>
+<approved hash="4,13,b536609c0a8222ea"/>
+<approved hash="4,14,b536609c0a8222ea"/>
+<approved hash="4,15,b536609c0a8222ea"/>
 </errors>
 </board>
 </drawing>

@@ -22,18 +22,18 @@
 //   #define C2    4
 //   #define C3    5
 //   #define C4    6
-#elif defined (__XTENSA__) //ESP8266
-  #warning compiling for ESP8266
+#elif defined (__XTENSA__) //ESP32S3
+  #warning compiling for ESP32S3
   #define EEPROM_SIZE 100
-  const int DataPin = D5;
-  const int IRQpin =  D6;
-  #define CLK   D0 
-  #define NRST  D0
-  #define C0    D0
-  #define C1    D0
-  #define C2    D0
-  #define C3    D0
-  #define C4    D0
+  const int DataPin = 39;
+  const int IRQpin =  40;
+  #define CLK   6 
+  #define NRST  7
+  #define C0    1
+  #define C1    2
+  #define C2    3
+  #define C3    4
+  #define C4    5
 #else
 #error Compiling for unsupported target.
 #endif
@@ -124,7 +124,8 @@ uint8_t rows[8]={0xff,0xff,0xff,0xff,0xff,0xff,0xff,0xff};
 uint8_t value = 255;
 uint8_t prev_value = 255;
 //U8G2_SSD1306_128X32_UNIVISION_1_HW_I2C u8g2(U8G2_R2); //, /* clock=*/ 21, /* data=*/ 20, /* reset=*/ U8X8_PIN_NONE);   // Adafruit Feather M0 Basic Proto + FeatherWing OLED
-U8G2_SSD1306_128X32_UNIVISION_F_HW_I2C u8g2(U8G2_R2, /* reset=*/ U8X8_PIN_NONE, /* clock=*/ SCL, /* data=*/ SDA);   // pin remapping with ESP8266 HW I2C
+//U8G2_SSD1306_128X32_UNIVISION_F_HW_I2C u8g2(U8G2_R2, /* reset=*/ U8X8_PIN_NONE, /* clock=*/ SCL, /* data=*/ SDA);   // pin remapping with ESP8266 HW I2C
+U8G2_SSD1306_128X32_UNIVISION_1_HW_I2C u8g2(U8G2_R2, /* reset=*/ U8X8_PIN_NONE, /* clock=*/SCL, /* data=*/ SDA);   // pin remapping with ESP8266 HW I2C
 const int pcfAddress = 0x20;
 short channel = 1;
 

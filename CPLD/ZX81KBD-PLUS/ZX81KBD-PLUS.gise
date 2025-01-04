@@ -126,9 +126,9 @@
       <status xil_pn:value="OutOfDateForPredecessor"/>
       <status xil_pn:value="OutOfDateForOutputs"/>
       <status xil_pn:value="OutputChanged"/>
+      <status xil_pn:value="OutputRemoved"/>
       <outfile xil_pn:name="isim.cmd"/>
       <outfile xil_pn:name="isim.log"/>
-      <outfile xil_pn:name="zx81kbdtb_isim_beh.wdb"/>
     </transform>
     <transform xil_pn:end_ts="1699471437" xil_pn:name="TRAN_copyInitialToXSTAbstractSynthesis" xil_pn:start_ts="1699471437">
       <status xil_pn:value="SuccessfullyRun"/>
@@ -170,15 +170,15 @@
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="WarningsGenerated"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="OutputRemoved"/>
       <outfile xil_pn:name="zx81kbdplus.gyd"/>
       <outfile xil_pn:name="zx81kbdplus.mfd"/>
-      <outfile xil_pn:name="zx81kbdplus.nga"/>
       <outfile xil_pn:name="zx81kbdplus.pad"/>
       <outfile xil_pn:name="zx81kbdplus.pnx"/>
       <outfile xil_pn:name="zx81kbdplus.rpt"/>
       <outfile xil_pn:name="zx81kbdplus.tim"/>
       <outfile xil_pn:name="zx81kbdplus.tspec"/>
-      <outfile xil_pn:name="zx81kbdplus.vm6"/>
       <outfile xil_pn:name="zx81kbdplus.xml"/>
       <outfile xil_pn:name="zx81kbdplus_build.xml"/>
       <outfile xil_pn:name="zx81kbdplus_html"/>
@@ -186,20 +186,27 @@
     </transform>
     <transform xil_pn:end_ts="1699662987" xil_pn:in_ck="-3550050500156960905" xil_pn:name="TRANEXT_crtProg_xc9500" xil_pn:prop_ck="-6294026017969277533" xil_pn:start_ts="1699662981">
       <status xil_pn:value="SuccessfullyRun"/>
-      <status xil_pn:value="ReadyToRun"/>
-      <outfile xil_pn:name="zx81kbdplus.jed"/>
+      <status xil_pn:value="NotReadyToRun"/>
+      <status xil_pn:value="OutOfDateForInputs"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
+      <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="InputRemoved"/>
+      <status xil_pn:value="OutputRemoved"/>
     </transform>
     <transform xil_pn:end_ts="1699474191" xil_pn:in_ck="-3550050500156960905" xil_pn:name="TRAN_timRpt" xil_pn:prop_ck="111903974446" xil_pn:start_ts="1699474187">
       <status xil_pn:value="AbortedRun"/>
       <status xil_pn:value="WarningsGenerated"/>
-      <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="NotReadyToRun"/>
       <status xil_pn:value="OutOfDateForInputs"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
       <status xil_pn:value="InputChanged"/>
+      <status xil_pn:value="InputRemoved"/>
     </transform>
     <transform xil_pn:end_ts="1699523731" xil_pn:in_ck="-8567166971294991554" xil_pn:name="TRAN_lockPins" xil_pn:prop_ck="192503003661904336" xil_pn:start_ts="1699523728">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <status xil_pn:value="OutOfDateForInputs"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
       <status xil_pn:value="InputChanged"/>
       <outfile xil_pn:name="zx81kbdplus.lck"/>
     </transform>
